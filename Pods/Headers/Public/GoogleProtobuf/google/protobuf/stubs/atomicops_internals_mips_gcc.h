@@ -1,0 +1,1 @@
+../../../../../../GoogleProtobuf/src/google/protobuf/stubs/atomicops_internals_mips_gcc.h

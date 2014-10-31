@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>09C1D61E-D2DB-4210-BFC3-49E15577A1CC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AppBootstrap</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CF5FD90625434778D101C4FDFF486A7AA1888F1C</key>
+		<string>https://github.com/yamingd/AppBootstrap.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AppBootstrap.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CF5FD90625434778D101C4FDFF486A7AA1888F1C</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yamingd/AppBootstrap.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CF5FD90625434778D101C4FDFF486A7AA1888F1C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CF5FD90625434778D101C4FDFF486A7AA1888F1C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AppBootstrap</string>
+		</dict>
+	</array>
+</dict>
+</plist>

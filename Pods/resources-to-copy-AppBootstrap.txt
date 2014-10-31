@@ -1,0 +1,2 @@
+/Users/user/Projects/AppBootstrap/Pods/libPhoneNumber-iOS/libPhoneNumber/Metadata Classes/NBPhoneNumberMetadata.plist
+/Users/user/Library/Developer/Xcode/DerivedData/AppBootstrap-bfstndjkyninkfdglcwmxbqqccax/Build/Intermediates/ArchiveIntermediates/AppBootstrap/BuildProductsPath/Release-iphoneos/Appirater.bundle
