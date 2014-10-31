@@ -9,6 +9,9 @@
 #import "AppSession.h"
 #import "AESCrypt.h"
 #import "DeviceHelper.h"
+#import "NSString+Ext.h"
+#import "NSData+Ext.h"
+#import "NSData+CommonCrypto.h"
 
 @implementation AppSession
 
@@ -96,7 +99,7 @@
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     if (self.sessionId == nil) {
         NSDate *now = [[NSDate alloc] init];
-        self.sessionId = [NSString stringWithFormat:@"%f", [now timeIntervalSince1970]];
+        self.sessionId = [NSString stringWithFormat:@"%ld", lrint([now timeIntervalSince1970])];
     }
     [dict setValue:self.sessionId forKey:@"sessionid"];
     [dict setValue:self.userName forKey:@"uname"];
@@ -123,6 +126,24 @@
         LOG(@"data: %@", data);
         [dict setValue:[data hmac:signed_key] forKey:@"X-signed"];
     }
+    //cookie
+    NSString* cookieId = [self.config objectForKey:@"CookieId"];
+    if (cookieId !=nil ) {
+        NSString* cookieSecret = [[self.config objectForKey:@"CookieSecret"] md5];
+        long timestamp = 1000 * [[NSDate date] timeIntervalSince1970];
+        NSData* ds = [[self.userId stringValue] dataUsingEncoding:NSUTF8StringEncoding];
+        NSString* uv = [NSString base64StringFromData:ds length:ds.length];
+        LOG(@"uv:%@", uv);
+        LOG(@"timestamp:%ld", timestamp);
+        LOG(@"secret:%@", secret);
+        NSString* sign = [NSString stringWithFormat:@"%ld|%@|%@|%@", timestamp, cookieSecret, cookieId, uv];
+        ds = [[sign dataUsingEncoding:NSUTF8StringEncoding] SHA256Hash];
+        sign = [ds hexString];
+        sign = [NSString stringWithFormat:@"%@|%ld|%@", uv, timestamp, sign];
+        LOG(@"x-auth:%@", sign);
+        [dict setValue:sign forKey:@"X-auth"];
+    }
+    
     LOG(@"header: %@", dict);
     return dict;
 }

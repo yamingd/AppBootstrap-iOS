@@ -6,16 +6,18 @@
 //  Copyright (c) 2011年 HOLDiPhone.com. All rights reserved.
 //
 
-#import "NSData+MD5.h"
+#import "NSData+Ext.h"
  
-@interface NSData(MD5)
+@interface NSData(Ext)
  
-- (NSString *)MD5;
+- (NSString *)md5;
 
 + (NSData *)dataFromBase64String:(NSString *)aString;
 - (NSString *)base64EncodedString;
 
 // added by Hiroshi Hashiguchi
 - (NSString *)base64EncodedStringWithSeparateLines:(BOOL)separateLines;
+
+- (NSString *)hexString;
 
 @end

@@ -43,8 +43,8 @@ static BOOL OSVersionIsAtLeastiOS7() {
 #import "TaskExecutor.h"
 #import "ModelSqlEngine.h"
 #import "XibFactory.h"
-#import "NSString+Base64.h"
-#import "NSString+MD5.h"
+#import "NSString+Ext.h"
+#import "NSData+Ext.h"
 #import "AudioPlayerView.h"
 
 #endif

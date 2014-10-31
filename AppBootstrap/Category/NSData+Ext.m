@@ -247,9 +247,9 @@ char *NewBase64Encode(
 	return outputBuffer;
 }
 
-@implementation NSData(MD5)
+@implementation NSData(Ext)
 
-- (NSString*)MD5
+- (NSString*)md5
 {
  	// Create byte array of unsigned chars
     unsigned char md5Buffer[CC_MD5_DIGEST_LENGTH];
@@ -325,5 +325,25 @@ char *NewBase64Encode(
 	free(outputBuffer);
 	return result;
 }
- 
+- (NSString *)hexString
+{
+    /* Returns hexadecimal string of NSData. Empty string if data is empty.   */
+    
+    const unsigned char *dataBuffer = (const unsigned char *)[self bytes];
+    
+    if (!dataBuffer)
+    {
+        return [NSString string];
+    }
+    
+    NSUInteger          dataLength  = [self length];
+    NSMutableString     *hexString  = [NSMutableString stringWithCapacity:(dataLength * 2)];
+    
+    for (int i = 0; i < dataLength; ++i)
+    {
+        [hexString appendFormat:@"%02x", (unsigned int)dataBuffer[i]];
+    }
+    
+    return [NSString stringWithString:hexString];
+}
 @end

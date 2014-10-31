@@ -10,14 +10,14 @@
 	<string>AppBootstrap</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>CF5FD90625434778D101C4FDFF486A7AA1888F1C</key>
+		<key>5C3BB98136C3FB2E944945F83A09738C9C128228</key>
 		<string>https://github.com/yamingd/AppBootstrap.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>AppBootstrap.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>CF5FD90625434778D101C4FDFF486A7AA1888F1C</key>
+		<key>5C3BB98136C3FB2E944945F83A09738C9C128228</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>CF5FD90625434778D101C4FDFF486A7AA1888F1C</string>
+	<string>5C3BB98136C3FB2E944945F83A09738C9C128228</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>CF5FD90625434778D101C4FDFF486A7AA1888F1C</string>
+			<string>5C3BB98136C3FB2E944945F83A09738C9C128228</string>
 			<key>IDESourceControlWCCName</key>
 			<string>AppBootstrap</string>
 		</dict>

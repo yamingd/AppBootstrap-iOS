@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE4BF12D1A03726F00A7BBBC /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BF1231A03726F00A7BBBC /* NSData+CommonCrypto.m */; };
+		CE4BF12E1A03726F00A7BBBC /* NSData+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BF1251A03726F00A7BBBC /* NSData+Ext.m */; };
+		CE4BF1301A03726F00A7BBBC /* NSString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BF1291A03726F00A7BBBC /* NSString+Ext.m */; };
 		CE6E69BD1A031C97002F7E22 /* PBObjcWrapper.hh in Copy Files */ = {isa = PBXBuildFile; fileRef = CE6E69BC1A03176D002F7E22 /* PBObjcWrapper.hh */; };
 		CE6E69BF1A0321B6002F7E22 /* PBObjc.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEBD47461A027F2B0020CC16 /* PBObjc.mm */; };
 		CE6E69DB1A032BF4002F7E22 /* mongoose.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6E69D91A032BF4002F7E22 /* mongoose.c */; };
@@ -15,9 +18,6 @@
 		CE7BF9951A022B57003F7A6C /* AppBootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BF9941A022B57003F7A6C /* AppBootstrap.m */; };
 		CE7BF99B1A022B57003F7A6C /* libAppBootstrap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7BF98F1A022B57003F7A6C /* libAppBootstrap.a */; };
 		CE7BFA861A022D70003F7A6C /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BF9AB1A022D70003F7A6C /* AESCrypt.m */; };
-		CE7BFA871A022D70003F7A6C /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BF9AD1A022D70003F7A6C /* NSData+Base64.m */; };
-		CE7BFA881A022D70003F7A6C /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BF9AF1A022D70003F7A6C /* NSData+CommonCrypto.m */; };
-		CE7BFA891A022D70003F7A6C /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BF9B11A022D70003F7A6C /* NSString+Base64.m */; };
 		CE7BFA9C1A022D70003F7A6C /* CMPopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BF9E81A022D70003F7A6C /* CMPopTipView.m */; };
 		CE7BFA9D1A022D70003F7A6C /* FHSegmentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BF9EA1A022D70003F7A6C /* FHSegmentedViewController.m */; };
 		CE7BFA9E1A022D70003F7A6C /* HYCircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BF9EC1A022D70003F7A6C /* HYCircleLoadingView.m */; };
@@ -60,11 +60,8 @@
 		CE7BFAC41A022D70003F7A6C /* DOUAudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA3D1A022D70003F7A6C /* DOUAudioStreamer.m */; };
 		CE7BFAC51A022D70003F7A6C /* DOUSimpleHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA401A022D70003F7A6C /* DOUSimpleHTTPRequest.m */; };
 		CE7BFAC61A022D70003F7A6C /* NSData+DOUMappedFile.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA421A022D70003F7A6C /* NSData+DOUMappedFile.m */; };
-		CE7BFAC71A022D70003F7A6C /* NSData+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA451A022D70003F7A6C /* NSData+MD5.m */; };
 		CE7BFAC81A022D70003F7A6C /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA471A022D70003F7A6C /* NSDate+Helper.m */; };
 		CE7BFAC91A022D70003F7A6C /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA491A022D70003F7A6C /* NSDate+TimeAgo.m */; };
-		CE7BFACA1A022D70003F7A6C /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA4C1A022D70003F7A6C /* NSString+Helper.m */; };
-		CE7BFACB1A022D70003F7A6C /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA4E1A022D70003F7A6C /* NSString+MD5.m */; };
 		CE7BFACC1A022D70003F7A6C /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA521A022D70003F7A6C /* OpenUDID.m */; };
 		CE7BFACD1A022D70003F7A6C /* POVoiceHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA561A022D70003F7A6C /* POVoiceHUD.m */; };
 		CE7BFAEE1A022E15003F7A6C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7BFAD51A022DC1003F7A6C /* AdSupport.framework */; };
@@ -87,8 +84,6 @@
 		CE7BFB091A022F20003F7A6C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7BFB081A022F20003F7A6C /* CoreMotion.framework */; };
 		CE7BFB0B1A022F35003F7A6C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7BFB0A1A022F35003F7A6C /* MediaPlayer.framework */; };
 		CE7BFB0C1A023681003F7A6C /* AESCrypt.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BF9AA1A022D70003F7A6C /* AESCrypt.h */; };
-		CE7BFB0D1A023681003F7A6C /* NSData+Base64.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BF9AC1A022D70003F7A6C /* NSData+Base64.h */; };
-		CE7BFB0E1A023681003F7A6C /* NSString+Base64.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BF9B01A022D70003F7A6C /* NSString+Base64.h */; };
 		CE7BFB111A023681003F7A6C /* FHSegmentedViewController.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BF9E91A022D70003F7A6C /* FHSegmentedViewController.h */; };
 		CE7BFB121A023681003F7A6C /* HYCircleLoadingView.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BF9EB1A022D70003F7A6C /* HYCircleLoadingView.h */; };
 		CE7BFB131A023681003F7A6C /* MBProgressHUD.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BF9ED1A022D70003F7A6C /* MBProgressHUD.h */; };
@@ -116,11 +111,8 @@
 		CE7BFB291A023681003F7A6C /* TextSizer.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA241A022D70003F7A6C /* TextSizer.h */; };
 		CE7BFB2A1A023681003F7A6C /* Utility.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA281A022D70003F7A6C /* Utility.h */; };
 		CE7BFB2B1A023681003F7A6C /* XibFactory.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA2A1A022D70003F7A6C /* XibFactory.h */; };
-		CE7BFB2C1A023681003F7A6C /* NSData+MD5.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA441A022D70003F7A6C /* NSData+MD5.h */; };
 		CE7BFB2D1A023681003F7A6C /* NSDate+Helper.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA461A022D70003F7A6C /* NSDate+Helper.h */; };
 		CE7BFB2E1A023681003F7A6C /* NSDate+TimeAgo.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA481A022D70003F7A6C /* NSDate+TimeAgo.h */; };
-		CE7BFB2F1A023681003F7A6C /* NSString+Helper.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA4B1A022D70003F7A6C /* NSString+Helper.h */; };
-		CE7BFB301A023681003F7A6C /* NSString+MD5.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA4D1A022D70003F7A6C /* NSString+MD5.h */; };
 		CE7BFB311A023681003F7A6C /* POVoiceHUD.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA551A022D70003F7A6C /* POVoiceHUD.h */; };
 		CE7BFB321A023681003F7A6C /* POVoiceHUDDelegate.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA571A022D70003F7A6C /* POVoiceHUDDelegate.h */; };
 		CE7BFB351A023691003F7A6C /* TSAppResponse.hh in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA261A022D70003F7A6C /* TSAppResponse.hh */; };
@@ -151,8 +143,6 @@
 				CE7BFC311A023C4D003F7A6C /* sdk.h in Copy Files */,
 				CE7BFB351A023691003F7A6C /* TSAppResponse.hh in Copy Files */,
 				CE7BFB0C1A023681003F7A6C /* AESCrypt.h in Copy Files */,
-				CE7BFB0D1A023681003F7A6C /* NSData+Base64.h in Copy Files */,
-				CE7BFB0E1A023681003F7A6C /* NSString+Base64.h in Copy Files */,
 				CE7BFB111A023681003F7A6C /* FHSegmentedViewController.h in Copy Files */,
 				CE7BFB121A023681003F7A6C /* HYCircleLoadingView.h in Copy Files */,
 				CE7BFB131A023681003F7A6C /* MBProgressHUD.h in Copy Files */,
@@ -180,11 +170,8 @@
 				CE7BFB291A023681003F7A6C /* TextSizer.h in Copy Files */,
 				CE7BFB2A1A023681003F7A6C /* Utility.h in Copy Files */,
 				CE7BFB2B1A023681003F7A6C /* XibFactory.h in Copy Files */,
-				CE7BFB2C1A023681003F7A6C /* NSData+MD5.h in Copy Files */,
 				CE7BFB2D1A023681003F7A6C /* NSDate+Helper.h in Copy Files */,
 				CE7BFB2E1A023681003F7A6C /* NSDate+TimeAgo.h in Copy Files */,
-				CE7BFB2F1A023681003F7A6C /* NSString+Helper.h in Copy Files */,
-				CE7BFB301A023681003F7A6C /* NSString+MD5.h in Copy Files */,
 				CE7BFB311A023681003F7A6C /* POVoiceHUD.h in Copy Files */,
 				CE7BFB321A023681003F7A6C /* POVoiceHUDDelegate.h in Copy Files */,
 				CE7BF9931A022B57003F7A6C /* AppBootstrap.h in Copy Files */,
@@ -197,6 +184,12 @@
 /* Begin PBXFileReference section */
 		706F2E9A34B6F970A5153C30 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C9456C7D13870914EB20B08E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CE4BF1221A03726F00A7BBBC /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		CE4BF1231A03726F00A7BBBC /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		CE4BF1241A03726F00A7BBBC /* NSData+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Ext.h"; sourceTree = "<group>"; };
+		CE4BF1251A03726F00A7BBBC /* NSData+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Ext.m"; sourceTree = "<group>"; };
+		CE4BF1281A03726F00A7BBBC /* NSString+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Ext.h"; sourceTree = "<group>"; };
+		CE4BF1291A03726F00A7BBBC /* NSString+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Ext.m"; sourceTree = "<group>"; };
 		CE6E69BC1A03176D002F7E22 /* PBObjcWrapper.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PBObjcWrapper.hh; sourceTree = "<group>"; };
 		CE6E69D91A032BF4002F7E22 /* mongoose.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mongoose.c; sourceTree = "<group>"; };
 		CE6E69DA1A032BF4002F7E22 /* mongoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mongoose.h; sourceTree = "<group>"; };
@@ -207,12 +200,6 @@
 		CE7BF9A01A022B57003F7A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7BF9AA1A022D70003F7A6C /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
 		CE7BF9AB1A022D70003F7A6C /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
-		CE7BF9AC1A022D70003F7A6C /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		CE7BF9AD1A022D70003F7A6C /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
-		CE7BF9AE1A022D70003F7A6C /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
-		CE7BF9AF1A022D70003F7A6C /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
-		CE7BF9B01A022D70003F7A6C /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
-		CE7BF9B11A022D70003F7A6C /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
 		CE7BF9B21A022D70003F7A6C /* App-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "App-Prefix.pch"; sourceTree = "<group>"; };
 		CE7BF9E71A022D70003F7A6C /* CMPopTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPopTipView.h; sourceTree = "<group>"; };
 		CE7BF9E81A022D70003F7A6C /* CMPopTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPopTipView.m; sourceTree = "<group>"; };
@@ -302,17 +289,11 @@
 		CE7BFA401A022D70003F7A6C /* DOUSimpleHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUSimpleHTTPRequest.m; sourceTree = "<group>"; };
 		CE7BFA411A022D70003F7A6C /* NSData+DOUMappedFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+DOUMappedFile.h"; sourceTree = "<group>"; };
 		CE7BFA421A022D70003F7A6C /* NSData+DOUMappedFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+DOUMappedFile.m"; sourceTree = "<group>"; };
-		CE7BFA441A022D70003F7A6C /* NSData+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MD5.h"; sourceTree = "<group>"; };
-		CE7BFA451A022D70003F7A6C /* NSData+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MD5.m"; sourceTree = "<group>"; };
 		CE7BFA461A022D70003F7A6C /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
 		CE7BFA471A022D70003F7A6C /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
 		CE7BFA481A022D70003F7A6C /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
 		CE7BFA491A022D70003F7A6C /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
 		CE7BFA4A1A022D70003F7A6C /* NSDateTimeAgo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NSDateTimeAgo.bundle; sourceTree = "<group>"; };
-		CE7BFA4B1A022D70003F7A6C /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
-		CE7BFA4C1A022D70003F7A6C /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
-		CE7BFA4D1A022D70003F7A6C /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
-		CE7BFA4E1A022D70003F7A6C /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		CE7BFA511A022D70003F7A6C /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
 		CE7BFA521A022D70003F7A6C /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
 		CE7BFA541A022D70003F7A6C /* microphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone@2x.png"; sourceTree = "<group>"; };
@@ -390,6 +371,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CE4BF11F1A0371E300A7BBBC /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				CE4BF1221A03726F00A7BBBC /* NSData+CommonCrypto.h */,
+				CE4BF1231A03726F00A7BBBC /* NSData+CommonCrypto.m */,
+				CE4BF1241A03726F00A7BBBC /* NSData+Ext.h */,
+				CE4BF1251A03726F00A7BBBC /* NSData+Ext.m */,
+				CE4BF1281A03726F00A7BBBC /* NSString+Ext.h */,
+				CE4BF1291A03726F00A7BBBC /* NSString+Ext.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		CE6E69D81A032BF4002F7E22 /* Mongoose */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +417,7 @@
 		CE7BF9911A022B57003F7A6C /* AppBootstrap */ = {
 			isa = PBXGroup;
 			children = (
+				CE4BF11F1A0371E300A7BBBC /* Category */,
 				CE6E69D81A032BF4002F7E22 /* Mongoose */,
 				CE7BF9A91A022D70003F7A6C /* AESCrypt */,
 				CE7BF9B21A022D70003F7A6C /* App-Prefix.pch */,
@@ -460,12 +455,6 @@
 			children = (
 				CE7BF9AA1A022D70003F7A6C /* AESCrypt.h */,
 				CE7BF9AB1A022D70003F7A6C /* AESCrypt.m */,
-				CE7BF9AC1A022D70003F7A6C /* NSData+Base64.h */,
-				CE7BF9AD1A022D70003F7A6C /* NSData+Base64.m */,
-				CE7BF9AE1A022D70003F7A6C /* NSData+CommonCrypto.h */,
-				CE7BF9AF1A022D70003F7A6C /* NSData+CommonCrypto.m */,
-				CE7BF9B01A022D70003F7A6C /* NSString+Base64.h */,
-				CE7BF9B11A022D70003F7A6C /* NSString+Base64.m */,
 			);
 			path = AESCrypt;
 			sourceTree = "<group>";
@@ -585,17 +574,11 @@
 		CE7BFA431A022D70003F7A6C /* NSDate */ = {
 			isa = PBXGroup;
 			children = (
-				CE7BFA441A022D70003F7A6C /* NSData+MD5.h */,
-				CE7BFA451A022D70003F7A6C /* NSData+MD5.m */,
 				CE7BFA461A022D70003F7A6C /* NSDate+Helper.h */,
 				CE7BFA471A022D70003F7A6C /* NSDate+Helper.m */,
 				CE7BFA481A022D70003F7A6C /* NSDate+TimeAgo.h */,
 				CE7BFA491A022D70003F7A6C /* NSDate+TimeAgo.m */,
 				CE7BFA4A1A022D70003F7A6C /* NSDateTimeAgo.bundle */,
-				CE7BFA4B1A022D70003F7A6C /* NSString+Helper.h */,
-				CE7BFA4C1A022D70003F7A6C /* NSString+Helper.m */,
-				CE7BFA4D1A022D70003F7A6C /* NSString+MD5.h */,
-				CE7BFA4E1A022D70003F7A6C /* NSString+MD5.m */,
 			);
 			path = NSDate;
 			sourceTree = "<group>";
@@ -786,6 +769,7 @@
 			files = (
 				CE6E69BF1A0321B6002F7E22 /* PBObjc.mm in Sources */,
 				CE7BFAC31A022D70003F7A6C /* DOUAudioRenderer.m in Sources */,
+				CE4BF12E1A03726F00A7BBBC /* NSData+Ext.m in Sources */,
 				CE7BFAA91A022D70003F7A6C /* UIViewController+TAPKeyboardPop.m in Sources */,
 				CE7BFAB81A022D70003F7A6C /* TaskExecutor.m in Sources */,
 				CE7BFAB31A022D70003F7A6C /* ModelSqlEngine.m in Sources */,
@@ -793,6 +777,7 @@
 				CE7BFAC51A022D70003F7A6C /* DOUSimpleHTTPRequest.m in Sources */,
 				CE7BFA9E1A022D70003F7A6C /* HYCircleLoadingView.m in Sources */,
 				CE7BFAA31A022D70003F7A6C /* UILabel+Ext.m in Sources */,
+				CE4BF1301A03726F00A7BBBC /* NSString+Ext.m in Sources */,
 				CE7BFAA51A022D70003F7A6C /* UIViewController+Ads.m in Sources */,
 				CE7BFAAF1A022D70003F7A6C /* AudioPlayerView.m in Sources */,
 				CE7BFAA81A022D70003F7A6C /* UIViewController+Social.m in Sources */,
@@ -800,10 +785,10 @@
 				CE7BFAB21A022D70003F7A6C /* Model.m in Sources */,
 				CE7BFAC41A022D70003F7A6C /* DOUAudioStreamer.m in Sources */,
 				CE7BFABB1A022D70003F7A6C /* Utility.m in Sources */,
+				CE4BF12D1A03726F00A7BBBC /* NSData+CommonCrypto.m in Sources */,
 				CE7BFAC91A022D70003F7A6C /* NSDate+TimeAgo.m in Sources */,
 				CE7BFAA71A022D70003F7A6C /* UIViewController+Ext.m in Sources */,
 				CE7BFAB11A022D70003F7A6C /* DeviceHelper.m in Sources */,
-				CE7BFA881A022D70003F7A6C /* NSData+CommonCrypto.m in Sources */,
 				CE7BFAB91A022D70003F7A6C /* TextSizer.m in Sources */,
 				CE7BFAAC1A022D70003F7A6C /* AppResponse.m in Sources */,
 				CE7BFAA61A022D70003F7A6C /* UIViewController+CWPopup.m in Sources */,
@@ -821,13 +806,10 @@
 				CE7BFAA01A022D70003F7A6C /* UIImage+ImageEffects.m in Sources */,
 				CE7BFA9D1A022D70003F7A6C /* FHSegmentedViewController.m in Sources */,
 				CE7BFAA11A022D70003F7A6C /* UIImageView+Ext.m in Sources */,
-				CE7BFACB1A022D70003F7A6C /* NSString+MD5.m in Sources */,
-				CE7BFAC71A022D70003F7A6C /* NSData+MD5.m in Sources */,
 				CE7BFAAD1A022D70003F7A6C /* AppSession.m in Sources */,
 				CE7BFA9F1A022D70003F7A6C /* MBProgressHUD.m in Sources */,
 				CE7BF9951A022B57003F7A6C /* AppBootstrap.m in Sources */,
 				CE7BFABC1A022D70003F7A6C /* XibFactory.m in Sources */,
-				CE7BFA871A022D70003F7A6C /* NSData+Base64.m in Sources */,
 				CE7BFAB61A022D70003F7A6C /* PullTableViewController.m in Sources */,
 				CE7BFAAA1A022D70003F7A6C /* APIClient.m in Sources */,
 				CE7BFAC61A022D70003F7A6C /* NSData+DOUMappedFile.m in Sources */,
@@ -835,11 +817,9 @@
 				CE7BFAC01A022D70003F7A6C /* DOUAudioFileProvider.m in Sources */,
 				CE7BFAC11A022D70003F7A6C /* DOUAudioLPCM.m in Sources */,
 				CE7BFAAE1A022D70003F7A6C /* Audio.m in Sources */,
-				CE7BFA891A022D70003F7A6C /* NSString+Base64.m in Sources */,
 				CE7BFAA41A022D70003F7A6C /* UITabBarController+Ext.m in Sources */,
 				CE7BFABF1A022D70003F7A6C /* DOUAudioFilePreprocessor.m in Sources */,
 				CE7BFAB51A022D70003F7A6C /* PAppResponse.pb.mm in Sources */,
-				CE7BFACA1A022D70003F7A6C /* NSString+Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

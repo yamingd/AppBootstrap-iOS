@@ -29,8 +29,8 @@
 
 #import "AESCrypt.h"
 
-#import "NSData+Base64.h"
-#import "NSString+Base64.h"
+#import "NSData+Ext.h"
+#import "NSString+Ext.h"
 #import "NSData+CommonCrypto.h"
 
 @implementation AESCrypt
@@ -42,7 +42,7 @@
 }
 
 + (NSString *)decrypt:(NSString *)base64EncodedString password:(NSString *)password {
-  NSData *encryptedData = [NSData base64DataFromString:base64EncodedString];
+  NSData *encryptedData = [NSData dataFromBase64String:base64EncodedString];
   NSData *decryptedData = [encryptedData decryptedAES256DataUsingKey:[[password dataUsingEncoding:NSUTF8StringEncoding] SHA256Hash] error:nil];
   return [[NSString alloc] initWithData:decryptedData encoding:NSUTF8StringEncoding];
 }

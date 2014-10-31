@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (Helper)
+@interface NSString (Ext)
 
 -(NSString *)dateTimeAgo;
 -(NSString *)unescapeUnicode;
+-(NSString *)md5;
+-(NSString *)hmac:(NSString*)secret;
++ (NSString *)base64StringFromData:(NSData *)data length:(NSUInteger)length;
 
 @end
