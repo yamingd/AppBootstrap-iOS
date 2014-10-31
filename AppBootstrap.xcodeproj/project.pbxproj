@@ -10,6 +10,7 @@
 		CE4BF12D1A03726F00A7BBBC /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BF1231A03726F00A7BBBC /* NSData+CommonCrypto.m */; };
 		CE4BF12E1A03726F00A7BBBC /* NSData+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BF1251A03726F00A7BBBC /* NSData+Ext.m */; };
 		CE4BF1301A03726F00A7BBBC /* NSString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BF1291A03726F00A7BBBC /* NSString+Ext.m */; };
+		CE4BF1341A037A9900A7BBBC /* RealmContext.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BF1331A037A9900A7BBBC /* RealmContext.m */; };
 		CE6E69BD1A031C97002F7E22 /* PBObjcWrapper.hh in Copy Files */ = {isa = PBXBuildFile; fileRef = CE6E69BC1A03176D002F7E22 /* PBObjcWrapper.hh */; };
 		CE6E69BF1A0321B6002F7E22 /* PBObjc.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEBD47461A027F2B0020CC16 /* PBObjc.mm */; };
 		CE6E69DB1A032BF4002F7E22 /* mongoose.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6E69D91A032BF4002F7E22 /* mongoose.c */; };
@@ -190,6 +191,8 @@
 		CE4BF1251A03726F00A7BBBC /* NSData+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Ext.m"; sourceTree = "<group>"; };
 		CE4BF1281A03726F00A7BBBC /* NSString+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Ext.h"; sourceTree = "<group>"; };
 		CE4BF1291A03726F00A7BBBC /* NSString+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Ext.m"; sourceTree = "<group>"; };
+		CE4BF1321A037A9900A7BBBC /* RealmContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmContext.h; sourceTree = "<group>"; };
+		CE4BF1331A037A9900A7BBBC /* RealmContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmContext.m; sourceTree = "<group>"; };
 		CE6E69BC1A03176D002F7E22 /* PBObjcWrapper.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PBObjcWrapper.hh; sourceTree = "<group>"; };
 		CE6E69D91A032BF4002F7E22 /* mongoose.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mongoose.c; sourceTree = "<group>"; };
 		CE6E69DA1A032BF4002F7E22 /* mongoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mongoose.h; sourceTree = "<group>"; };
@@ -538,6 +541,8 @@
 				CE7BFA291A022D70003F7A6C /* Utility.m */,
 				CE7BFA2A1A022D70003F7A6C /* XibFactory.h */,
 				CE7BFA2B1A022D70003F7A6C /* XibFactory.m */,
+				CE4BF1321A037A9900A7BBBC /* RealmContext.h */,
+				CE4BF1331A037A9900A7BBBC /* RealmContext.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -796,6 +801,7 @@
 				CE7BFAB01A022D70003F7A6C /* BaseViewController.m in Sources */,
 				CE7BFAA21A022D70003F7A6C /* UIImageView+LBBlurredImage.m in Sources */,
 				CE6E69DB1A032BF4002F7E22 /* mongoose.c in Sources */,
+				CE4BF1341A037A9900A7BBBC /* RealmContext.m in Sources */,
 				CE7BFAC21A022D70003F7A6C /* DOUAudioPlaybackItem.m in Sources */,
 				CE7BFABA1A022D70003F7A6C /* TSAppResponse.mm in Sources */,
 				CE7BFABD1A022D70003F7A6C /* DOUAudioDecoder.m in Sources */,
