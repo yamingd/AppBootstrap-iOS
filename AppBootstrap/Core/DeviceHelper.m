@@ -101,14 +101,14 @@
     NSString *ver = [[UIDevice currentDevice] systemVersion]; // iOS version as string
     int vint = [ver intValue]; // iOS version as int
     if (vint >= 6) {
-        NSString *ouuid = [SSKeychain passwordForService:@"com.whosbean.com" account:@"uuid"];
+        NSString *ouuid = [SSKeychain passwordForService:@"com.inno" account:@"uuid"];
         if (ouuid == nil || [ouuid isEqualToString:@""]) {
             CFUUIDRef uuid = CFUUIDCreate(NULL);
             assert(uuid != NULL);
             CFStringRef uuidStr = CFUUIDCreateString(NULL, uuid);
             ouuid = [NSString stringWithFormat:@"%@", uuidStr];
             ouuid = [[ouuid stringByReplacingOccurrencesOfString:@"-" withString:@""] lowercaseString];
-            [SSKeychain setPassword:ouuid forService:@"com.whosbean.com" account:@"uuid"];
+            [SSKeychain setPassword:ouuid forService:@"com.inno" account:@"uuid"];
         }
         ouuid = [[ouuid stringByReplacingOccurrencesOfString:@"-" withString:@""] lowercaseString];
         return ouuid;

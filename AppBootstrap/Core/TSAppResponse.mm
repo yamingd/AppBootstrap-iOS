@@ -80,6 +80,7 @@
         id obj = [[type alloc] initWithProtocolData:item];
         [dslist addObject:obj];
     }
+    self.data = dslist;
     return dslist;
 }
 

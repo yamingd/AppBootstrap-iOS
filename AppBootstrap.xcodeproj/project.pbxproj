@@ -6,11 +6,30 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		CE4815281A15E49B0037EFA5 /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CE4815291A15E49B0037EFA5 /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				CE48152E1A15E4CE0037EFA5 /* ShellScript */,
+			);
+			dependencies = (
+				CE48152D1A15E4B30037EFA5 /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		CE4BF12D1A03726F00A7BBBC /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BF1231A03726F00A7BBBC /* NSData+CommonCrypto.m */; };
 		CE4BF12E1A03726F00A7BBBC /* NSData+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BF1251A03726F00A7BBBC /* NSData+Ext.m */; };
 		CE4BF1301A03726F00A7BBBC /* NSString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BF1291A03726F00A7BBBC /* NSString+Ext.m */; };
 		CE4BF1341A037A9900A7BBBC /* RealmContext.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BF1331A037A9900A7BBBC /* RealmContext.m */; };
+		CE4BF1351A037F8C00A7BBBC /* RealmContext.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE4BF1321A037A9900A7BBBC /* RealmContext.h */; };
+		CE4BF1361A037FA600A7BBBC /* NSData+CommonCrypto.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE4BF1221A03726F00A7BBBC /* NSData+CommonCrypto.h */; };
+		CE4BF1371A037FA600A7BBBC /* NSData+Ext.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE4BF1241A03726F00A7BBBC /* NSData+Ext.h */; };
+		CE4BF1381A037FA600A7BBBC /* NSString+Ext.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE4BF1281A03726F00A7BBBC /* NSString+Ext.h */; };
 		CE6E69BD1A031C97002F7E22 /* PBObjcWrapper.hh in Copy Files */ = {isa = PBXBuildFile; fileRef = CE6E69BC1A03176D002F7E22 /* PBObjcWrapper.hh */; };
 		CE6E69BF1A0321B6002F7E22 /* PBObjc.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEBD47461A027F2B0020CC16 /* PBObjc.mm */; };
 		CE6E69DB1A032BF4002F7E22 /* mongoose.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6E69D91A032BF4002F7E22 /* mongoose.c */; };
@@ -122,6 +141,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CE48152C1A15E4B30037EFA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE7BF9871A022B57003F7A6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE7BF98E1A022B57003F7A6C;
+			remoteInfo = AppBootstrap;
+		};
 		CE7BF99C1A022B57003F7A6C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CE7BF9871A022B57003F7A6C /* Project object */;
@@ -138,6 +164,10 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				CE4BF1361A037FA600A7BBBC /* NSData+CommonCrypto.h in Copy Files */,
+				CE4BF1371A037FA600A7BBBC /* NSData+Ext.h in Copy Files */,
+				CE4BF1381A037FA600A7BBBC /* NSString+Ext.h in Copy Files */,
+				CE4BF1351A037F8C00A7BBBC /* RealmContext.h in Copy Files */,
 				CE6E69DC1A032C2F002F7E22 /* mongoose.h in Copy Files */,
 				CE6E69BD1A031C97002F7E22 /* PBObjcWrapper.hh in Copy Files */,
 				CEBD47481A0286120020CC16 /* PBObjc.hh in Copy Files */,
@@ -646,7 +676,7 @@
 				CE7BF98C1A022B57003F7A6C /* Frameworks */,
 				CE7BF98D1A022B57003F7A6C /* Copy Files */,
 				C2B46C70F5101174931E02C9 /* Copy Pods Resources */,
-				CE6E69C21A03290E002F7E22 /* ShellScript */,
+				CE6E69C21A03290E002F7E22 /* Build Framework */,
 			);
 			buildRules = (
 			);
@@ -684,6 +714,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = whosbean.com;
 				TargetAttributes = {
+					CE4815281A15E49B0037EFA5 = {
+						CreatedOnToolsVersion = 6.1;
+					};
 					CE7BF98E1A022B57003F7A6C = {
 						CreatedOnToolsVersion = 6.1;
 					};
@@ -707,6 +740,7 @@
 			targets = (
 				CE7BF98E1A022B57003F7A6C /* AppBootstrap */,
 				CE7BF9991A022B57003F7A6C /* AppBootstrapTests */,
+				CE4815281A15E49B0037EFA5 /* Framework */,
 			);
 		};
 /* End PBXProject section */
@@ -737,7 +771,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CE6E69C21A03290E002F7E22 /* ShellScript */ = {
+		CE48152E1A15E4CE0037EFA5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -748,7 +782,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "##########################################\n#\n# c.f. http://stackoverflow.com/questions/3520977/build-fat-static-library-device-simulator-using-xcode-and-sdk-4\n#\n# Version 2.7\n#\n# Latest Change:\n# - Supports iPhone 5 / iPod Touch 5 (uses Apple's workaround to lipo bug)\n#\n# Purpose:\n#   Automatically create a Universal static library for iPhone + iPad + iPhone Simulator from within XCode\n#\n# Author: Adam Martin - http://twitter.com/redglassesapps\n# Based on: original script from Eonil (main changes: Eonil's script WILL NOT WORK in Xcode GUI - it WILL CRASH YOUR COMPUTER)\n#\n\nset -e\nset -o pipefail\n\n#################[ Tests: helps workaround any future bugs in Xcode ]########\n#\nDEBUG_THIS_SCRIPT=\"false\"\n\nif [ $DEBUG_THIS_SCRIPT = \"true\" ]\nthen\necho \"########### TESTS #############\"\necho \"Use the following variables when debugging this script; note that they may change on recursions\"\necho \"BUILD_DIR = $BUILD_DIR\"\necho \"BUILD_ROOT = $BUILD_ROOT\"\necho \"CONFIGURATION_BUILD_DIR = $CONFIGURATION_BUILD_DIR\"\necho \"BUILT_PRODUCTS_DIR = $BUILT_PRODUCTS_DIR\"\necho \"CONFIGURATION_TEMP_DIR = $CONFIGURATION_TEMP_DIR\"\necho \"TARGET_BUILD_DIR = $TARGET_BUILD_DIR\"\nfi\n\n#####################[ part 1 ]##################\n# First, work out the BASESDK version number (NB: Apple ought to report this, but they hide it)\n#    (incidental: searching for substrings in sh is a nightmare! Sob)\n\nSDK_VERSION=$(echo ${SDK_NAME} | grep -o '.\\{3\\}$')\n\n# Next, work out if we're in SIM or DEVICE\n\nif [ ${PLATFORM_NAME} = \"iphonesimulator\" ]\nthen\nOTHER_SDK_TO_BUILD=iphoneos${SDK_VERSION}\nelse\nOTHER_SDK_TO_BUILD=iphonesimulator${SDK_VERSION}\nfi\n\necho \"XCode has selected SDK: ${PLATFORM_NAME} with version: ${SDK_VERSION} (although back-targetting: ${IPHONEOS_DEPLOYMENT_TARGET})\"\necho \"...therefore, OTHER_SDK_TO_BUILD = ${OTHER_SDK_TO_BUILD}\"\n#\n#####################[ end of part 1 ]##################\n\n#####################[ part 2 ]##################\n#\n# IF this is the original invocation, invoke WHATEVER other builds are required\n#\n# Xcode is already building ONE target...\n#\n# ...but this is a LIBRARY, so Apple is wrong to set it to build just one.\n# ...we need to build ALL targets\n# ...we MUST NOT re-build the target that is ALREADY being built: Xcode WILL CRASH YOUR COMPUTER if you try this (infinite recursion!)\n#\n#\n# So: build ONLY the missing platforms/configurations.\n\nif [ \"true\" == ${ALREADYINVOKED:-false} ]\nthen\necho \"RECURSION: I am NOT the root invocation, so I'm NOT going to recurse\"\nelse\n# CRITICAL:\n# Prevent infinite recursion (Xcode sucks)\nexport ALREADYINVOKED=\"true\"\n\necho \"RECURSION: I am the root ... recursing all missing build targets NOW...\"\necho \"RECURSION: ...about to invoke: xcodebuild -configuration \\\"${CONFIGURATION}\\\" -project \\\"${PROJECT_NAME}.xcodeproj\\\" -target \\\"${TARGET_NAME}\\\" -sdk \\\"${OTHER_SDK_TO_BUILD}\\\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO\" BUILD_DIR=\\\"${BUILD_DIR}\\\" BUILD_ROOT=\\\"${BUILD_ROOT}\\\" SYMROOT=\\\"${SYMROOT}\\\"\n\nxcodebuild -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}.xcodeproj\" -target \"${TARGET_NAME}\" -sdk \"${OTHER_SDK_TO_BUILD}\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\"\n\nACTION=\"build\"\n\n#Merge all platform binaries as a fat binary for each configurations.\n\n# Calculate where the (multiple) built files are coming from:\nCURRENTCONFIG_DEVICE_DIR=${SYMROOT}/${CONFIGURATION}-iphoneos\nCURRENTCONFIG_SIMULATOR_DIR=${SYMROOT}/${CONFIGURATION}-iphonesimulator\n\necho \"Taking device build from: ${CURRENTCONFIG_DEVICE_DIR}\"\necho \"Taking simulator build from: ${CURRENTCONFIG_SIMULATOR_DIR}\"\n\nCREATING_UNIVERSAL_DIR=${SYMROOT}/${CONFIGURATION}-universal\necho \"...I will output a universal build to: ${CREATING_UNIVERSAL_DIR}\"\n\n# ... remove the products of previous runs of this script\n#      NB: this directory is ONLY created by this script - it should be safe to delete!\n\nrm -rf \"${CREATING_UNIVERSAL_DIR}\"\nmkdir \"${CREATING_UNIVERSAL_DIR}\"\n\n#\necho \"lipo: for current configuration (${CONFIGURATION}) creating output file: ${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\"\nxcrun -sdk iphoneos lipo -create -output \"${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_DEVICE_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_SIMULATOR_DIR}/${EXECUTABLE_NAME}\"\n\n#########\n#\n# Added: StackOverflow suggestion to also copy \"include\" files\n#    (untested, but should work OK)\n#\necho \"Fetching headers from ${PUBLIC_HEADERS_FOLDER_PATH}\"\necho \"  (if you embed your library project in another project, you will need to add\"\necho \"   a \"User Search Headers\" build setting of: (NB INCLUDE THE DOUBLE QUOTES BELOW!)\"\necho '        \"$(TARGET_BUILD_DIR)/usr/local/include/\"'\nif [ -d \"${CURRENTCONFIG_DEVICE_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\" ]\nthen\nmkdir -p \"${CREATING_UNIVERSAL_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\"\n# * needs to be outside the double quotes?\ncp -r \"${CURRENTCONFIG_DEVICE_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\"* \"${CREATING_UNIVERSAL_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\"\nfi\nfi";
+			shellScript = "set -e\n\n# If we're already inside this script then die\nif [ -n \"$RW_MULTIPLATFORM_BUILD_IN_PROGRESS\" ]; then\nexit 0\nfi\nexport RW_MULTIPLATFORM_BUILD_IN_PROGRESS=1\n\nRW_FRAMEWORK_NAME=${PROJECT_NAME}\nRW_INPUT_STATIC_LIB=\"lib${PROJECT_NAME}.a\"\nRW_FRAMEWORK_LOCATION=\"${BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework\"\n\nfunction build_static_library {\n    # Will rebuild the static library as specified\n    #     build_static_library sdk\n    xcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" \\\n    -target \"${TARGET_NAME}\" \\\n    -configuration \"${CONFIGURATION}\" \\\n    -sdk \"${1}\" \\\n    ONLY_ACTIVE_ARCH=NO \\\n    BUILD_DIR=\"${BUILD_DIR}\" \\\n    OBJROOT=\"${OBJROOT}\" \\\n    BUILD_ROOT=\"${BUILD_ROOT}\" \\\n    SYMROOT=\"${SYMROOT}\" $ACTION\n}\n\nfunction make_fat_library {\n    # Will smash 2 static libs together\n    #     make_fat_library in1 in2 out\n    xcrun lipo -create \"${1}\" \"${2}\" -output \"${3}\"\n}\n\n# 1 - Extract the platform (iphoneos/iphonesimulator) from the SDK name\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]; then\nRW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 2 - Extract the version from the SDK\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]; then\nRW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 3 - Determine the other platform\nif [ \"$RW_SDK_PLATFORM\" == \"iphoneos\" ]; then\nRW_OTHER_PLATFORM=iphonesimulator\nelse\nRW_OTHER_PLATFORM=iphoneos\nfi\n\n# 4 - Find the build directory\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$RW_SDK_PLATFORM$ ]]; then\nRW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${RW_OTHER_PLATFORM}\"\nelse\necho \"Could not find other platform build directory.\"\nexit 1\nfi\n\n# Build the other platform.\nbuild_static_library \"${RW_OTHER_PLATFORM}${RW_SDK_VERSION}\"\n\n# If we're currently building for iphonesimulator, then need to rebuild\n#   to ensure that we get both i386 and x86_64\nif [ \"$RW_SDK_PLATFORM\" == \"iphonesimulator\" ]; then\nbuild_static_library \"${SDK_NAME}\"\nfi\n\n# Join the 2 static libs into 1 and push into the .framework\nmake_fat_library \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Ensure that the framework is present in both platform's build directories\ncp -a \"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Copy the framework to the user's desktop\nditto \"${RW_FRAMEWORK_LOCATION}\" \"${HOME}/Desktop/${RW_FRAMEWORK_NAME}.framework\"";
+		};
+		CE6E69C21A03290E002F7E22 /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n# Create the path to the real Headers die\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Create the required symlinks\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n# Copy the public headers into the framework\n/bin/cp -a \"${TARGET_BUILD_DIR}/include/${PRODUCT_NAME}/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"";
 		};
 		D8AFE65051B1BF6E5DABD5C2 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -839,6 +887,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CE48152D1A15E4B30037EFA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE7BF98E1A022B57003F7A6C /* AppBootstrap */;
+			targetProxy = CE48152C1A15E4B30037EFA5 /* PBXContainerItemProxy */;
+		};
 		CE7BF99D1A022B57003F7A6C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CE7BF98E1A022B57003F7A6C /* AppBootstrap */;
@@ -847,6 +900,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		CE48152A1A15E49B0037EFA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CE48152B1A15E49B0037EFA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		CE7BF9A11A022B57003F7A6C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1026,6 +1093,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CE4815291A15E49B0037EFA5 /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE48152A1A15E49B0037EFA5 /* Debug */,
+				CE48152B1A15E49B0037EFA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		CE7BF98A1A022B57003F7A6C /* Build configuration list for PBXProject "AppBootstrap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
