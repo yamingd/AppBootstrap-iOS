@@ -65,9 +65,7 @@
 		CE7BFAB01A022D70003F7A6C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA111A022D70003F7A6C /* BaseViewController.m */; };
 		CE7BFAB11A022D70003F7A6C /* DeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA131A022D70003F7A6C /* DeviceHelper.m */; };
 		CE7BFAB51A022D70003F7A6C /* PAppResponse.pb.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA1B1A022D70003F7A6C /* PAppResponse.pb.mm */; };
-		CE7BFAB61A022D70003F7A6C /* PullTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA1E1A022D70003F7A6C /* PullTableViewController.m */; };
 		CE7BFAB81A022D70003F7A6C /* TaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA231A022D70003F7A6C /* TaskExecutor.m */; };
-		CE7BFAB91A022D70003F7A6C /* TextSizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA251A022D70003F7A6C /* TextSizer.m */; };
 		CE7BFABA1A022D70003F7A6C /* TSAppResponse.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA271A022D70003F7A6C /* TSAppResponse.mm */; };
 		CE7BFABB1A022D70003F7A6C /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA291A022D70003F7A6C /* Utility.m */; };
 		CE7BFABC1A022D70003F7A6C /* XibFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA2B1A022D70003F7A6C /* XibFactory.m */; };
@@ -124,9 +122,7 @@
 		CE7BFB211A023681003F7A6C /* Audio.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA0C1A022D70003F7A6C /* Audio.h */; };
 		CE7BFB221A023681003F7A6C /* AudioPlayerView.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA0E1A022D70003F7A6C /* AudioPlayerView.h */; };
 		CE7BFB231A023681003F7A6C /* BaseViewController.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA101A022D70003F7A6C /* BaseViewController.h */; };
-		CE7BFB261A023681003F7A6C /* PullTableViewController.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA1D1A022D70003F7A6C /* PullTableViewController.h */; };
 		CE7BFB281A023681003F7A6C /* TaskExecutor.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA221A022D70003F7A6C /* TaskExecutor.h */; };
-		CE7BFB291A023681003F7A6C /* TextSizer.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA241A022D70003F7A6C /* TextSizer.h */; };
 		CE7BFB2A1A023681003F7A6C /* Utility.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA281A022D70003F7A6C /* Utility.h */; };
 		CE7BFB2B1A023681003F7A6C /* XibFactory.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA2A1A022D70003F7A6C /* XibFactory.h */; };
 		CE7BFB2D1A023681003F7A6C /* NSDate+Helper.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA461A022D70003F7A6C /* NSDate+Helper.h */; };
@@ -190,9 +186,7 @@
 				CE7BFB211A023681003F7A6C /* Audio.h in Copy Files */,
 				CE7BFB221A023681003F7A6C /* AudioPlayerView.h in Copy Files */,
 				CE7BFB231A023681003F7A6C /* BaseViewController.h in Copy Files */,
-				CE7BFB261A023681003F7A6C /* PullTableViewController.h in Copy Files */,
 				CE7BFB281A023681003F7A6C /* TaskExecutor.h in Copy Files */,
-				CE7BFB291A023681003F7A6C /* TextSizer.h in Copy Files */,
 				CE7BFB2A1A023681003F7A6C /* Utility.h in Copy Files */,
 				CE7BFB2B1A023681003F7A6C /* XibFactory.h in Copy Files */,
 				CE7BFB2D1A023681003F7A6C /* NSDate+Helper.h in Copy Files */,
@@ -284,13 +278,9 @@
 		CE7BFA1A1A022D70003F7A6C /* PAppResponse.pb.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PAppResponse.pb.hh; sourceTree = "<group>"; };
 		CE7BFA1B1A022D70003F7A6C /* PAppResponse.pb.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PAppResponse.pb.mm; sourceTree = "<group>"; };
 		CE7BFA1C1A022D70003F7A6C /* PAppResponse.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PAppResponse.proto; sourceTree = "<group>"; };
-		CE7BFA1D1A022D70003F7A6C /* PullTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullTableViewController.h; sourceTree = "<group>"; };
-		CE7BFA1E1A022D70003F7A6C /* PullTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullTableViewController.m; sourceTree = "<group>"; };
 		CE7BFA1F1A022D70003F7A6C /* sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdk.h; sourceTree = "<group>"; };
 		CE7BFA221A022D70003F7A6C /* TaskExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskExecutor.h; sourceTree = "<group>"; };
 		CE7BFA231A022D70003F7A6C /* TaskExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskExecutor.m; sourceTree = "<group>"; };
-		CE7BFA241A022D70003F7A6C /* TextSizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextSizer.h; sourceTree = "<group>"; };
-		CE7BFA251A022D70003F7A6C /* TextSizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextSizer.m; sourceTree = "<group>"; };
 		CE7BFA261A022D70003F7A6C /* TSAppResponse.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TSAppResponse.hh; sourceTree = "<group>"; };
 		CE7BFA271A022D70003F7A6C /* TSAppResponse.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TSAppResponse.mm; sourceTree = "<group>"; };
 		CE7BFA281A022D70003F7A6C /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
@@ -557,13 +547,9 @@
 				CEBD47451A027F2B0020CC16 /* PBObjc.hh */,
 				CEBD47461A027F2B0020CC16 /* PBObjc.mm */,
 				CE6E69BC1A03176D002F7E22 /* PBObjcWrapper.hh */,
-				CE7BFA1D1A022D70003F7A6C /* PullTableViewController.h */,
-				CE7BFA1E1A022D70003F7A6C /* PullTableViewController.m */,
 				CE7BFA1F1A022D70003F7A6C /* sdk.h */,
 				CE7BFA221A022D70003F7A6C /* TaskExecutor.h */,
 				CE7BFA231A022D70003F7A6C /* TaskExecutor.m */,
-				CE7BFA241A022D70003F7A6C /* TextSizer.h */,
-				CE7BFA251A022D70003F7A6C /* TextSizer.m */,
 				CE7BFA261A022D70003F7A6C /* TSAppResponse.hh */,
 				CE7BFA271A022D70003F7A6C /* TSAppResponse.mm */,
 				CE7BFA281A022D70003F7A6C /* Utility.h */,
@@ -844,7 +830,6 @@
 				CE7BFAC91A022D70003F7A6C /* NSDate+TimeAgo.m in Sources */,
 				CE7BFAA71A022D70003F7A6C /* UIViewController+Ext.m in Sources */,
 				CE7BFAB11A022D70003F7A6C /* DeviceHelper.m in Sources */,
-				CE7BFAB91A022D70003F7A6C /* TextSizer.m in Sources */,
 				CE7BFAAC1A022D70003F7A6C /* AppResponse.m in Sources */,
 				CE7BFAA61A022D70003F7A6C /* UIViewController+CWPopup.m in Sources */,
 				CE7BFA9C1A022D70003F7A6C /* CMPopTipView.m in Sources */,
@@ -865,7 +850,6 @@
 				CE7BF9951A022B57003F7A6C /* AppBootstrap.m in Sources */,
 				CE5EA72B1AE35EBF00E80E4D /* UIViewController+SearchBar.m in Sources */,
 				CE7BFABC1A022D70003F7A6C /* XibFactory.m in Sources */,
-				CE7BFAB61A022D70003F7A6C /* PullTableViewController.m in Sources */,
 				CE7BFAAA1A022D70003F7A6C /* APIClient.m in Sources */,
 				CE7BFAC61A022D70003F7A6C /* NSData+DOUMappedFile.m in Sources */,
 				CE7BFACC1A022D70003F7A6C /* OpenUDID.m in Sources */,

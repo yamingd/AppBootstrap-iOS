@@ -1,0 +1,1 @@
+../../../QBImagePickerController/Pod/Classes/QBAssetsCollectionOverlayView.h
