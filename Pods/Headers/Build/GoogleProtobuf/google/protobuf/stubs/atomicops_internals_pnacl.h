@@ -1,1 +1,0 @@
-../../../../../../GoogleProtobuf/src/google/protobuf/stubs/atomicops_internals_pnacl.h

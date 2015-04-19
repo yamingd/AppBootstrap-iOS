@@ -11,6 +11,12 @@
 @interface UIImageView (Ext)
 
 - (void)setImageWith:(NSString *)urlOrName
-       placeholder:(NSString *)holderName;
+         placeholder:(NSString *)holderName;
+
+- (void)setImageWithHolder:(NSString *)urlOrName
+         placeholder:(UIImage *)holder;
+
+- (void)circleCover;
+- (void)roundCover:(float)radius;
 
 @end

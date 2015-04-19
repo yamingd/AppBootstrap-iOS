@@ -20,6 +20,6 @@
 @property (readonly,nonatomic,strong) NSArray* errors;
 @property (readonly,nonatomic,strong) NSData *protocolData;
 
--(NSArray*) parseData:(Class)type;
+-(NSMutableArray*) parseData:(Class)type;
 
 @end

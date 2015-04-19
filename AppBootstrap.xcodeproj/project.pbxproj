@@ -22,6 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		05F3E8D2D4D18682378044B7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84ECC916381902B212B4B25F /* libPods.a */; };
 		CE4BF12D1A03726F00A7BBBC /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BF1231A03726F00A7BBBC /* NSData+CommonCrypto.m */; };
 		CE4BF12E1A03726F00A7BBBC /* NSData+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BF1251A03726F00A7BBBC /* NSData+Ext.m */; };
 		CE4BF1301A03726F00A7BBBC /* NSString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BF1291A03726F00A7BBBC /* NSString+Ext.m */; };
@@ -30,10 +31,13 @@
 		CE4BF1361A037FA600A7BBBC /* NSData+CommonCrypto.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE4BF1221A03726F00A7BBBC /* NSData+CommonCrypto.h */; };
 		CE4BF1371A037FA600A7BBBC /* NSData+Ext.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE4BF1241A03726F00A7BBBC /* NSData+Ext.h */; };
 		CE4BF1381A037FA600A7BBBC /* NSString+Ext.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE4BF1281A03726F00A7BBBC /* NSString+Ext.h */; };
+		CE5EA7271AE35EBF00E80E4D /* LPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5EA71D1AE35EBF00E80E4D /* LPlaceholderTextView.m */; };
+		CE5EA7281AE35EBF00E80E4D /* UIImageEdView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5EA71F1AE35EBF00E80E4D /* UIImageEdView.m */; };
+		CE5EA72A1AE35EBF00E80E4D /* UIViewController+ImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5EA7221AE35EBF00E80E4D /* UIViewController+ImagePicker.m */; };
+		CE5EA72B1AE35EBF00E80E4D /* UIViewController+SearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5EA7241AE35EBF00E80E4D /* UIViewController+SearchBar.m */; };
+		CE5EA7301AE3638B00E80E4D /* KMobClick.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5EA72F1AE3638B00E80E4D /* KMobClick.m */; };
 		CE6E69BD1A031C97002F7E22 /* PBObjcWrapper.hh in Copy Files */ = {isa = PBXBuildFile; fileRef = CE6E69BC1A03176D002F7E22 /* PBObjcWrapper.hh */; };
 		CE6E69BF1A0321B6002F7E22 /* PBObjc.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEBD47461A027F2B0020CC16 /* PBObjc.mm */; };
-		CE6E69DB1A032BF4002F7E22 /* mongoose.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6E69D91A032BF4002F7E22 /* mongoose.c */; };
-		CE6E69DC1A032C2F002F7E22 /* mongoose.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE6E69DA1A032BF4002F7E22 /* mongoose.h */; };
 		CE7BF9931A022B57003F7A6C /* AppBootstrap.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BF9921A022B57003F7A6C /* AppBootstrap.h */; };
 		CE7BF9951A022B57003F7A6C /* AppBootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BF9941A022B57003F7A6C /* AppBootstrap.m */; };
 		CE7BF99B1A022B57003F7A6C /* libAppBootstrap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7BF98F1A022B57003F7A6C /* libAppBootstrap.a */; };
@@ -60,11 +64,8 @@
 		CE7BFAAF1A022D70003F7A6C /* AudioPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA0F1A022D70003F7A6C /* AudioPlayerView.m */; };
 		CE7BFAB01A022D70003F7A6C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA111A022D70003F7A6C /* BaseViewController.m */; };
 		CE7BFAB11A022D70003F7A6C /* DeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA131A022D70003F7A6C /* DeviceHelper.m */; };
-		CE7BFAB21A022D70003F7A6C /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA151A022D70003F7A6C /* Model.m */; };
-		CE7BFAB31A022D70003F7A6C /* ModelSqlEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA171A022D70003F7A6C /* ModelSqlEngine.m */; };
 		CE7BFAB51A022D70003F7A6C /* PAppResponse.pb.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA1B1A022D70003F7A6C /* PAppResponse.pb.mm */; };
 		CE7BFAB61A022D70003F7A6C /* PullTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA1E1A022D70003F7A6C /* PullTableViewController.m */; };
-		CE7BFAB71A022D70003F7A6C /* SqlTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA211A022D70003F7A6C /* SqlTemplate.m */; };
 		CE7BFAB81A022D70003F7A6C /* TaskExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA231A022D70003F7A6C /* TaskExecutor.m */; };
 		CE7BFAB91A022D70003F7A6C /* TextSizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA251A022D70003F7A6C /* TextSizer.m */; };
 		CE7BFABA1A022D70003F7A6C /* TSAppResponse.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA271A022D70003F7A6C /* TSAppResponse.mm */; };
@@ -123,10 +124,7 @@
 		CE7BFB211A023681003F7A6C /* Audio.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA0C1A022D70003F7A6C /* Audio.h */; };
 		CE7BFB221A023681003F7A6C /* AudioPlayerView.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA0E1A022D70003F7A6C /* AudioPlayerView.h */; };
 		CE7BFB231A023681003F7A6C /* BaseViewController.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA101A022D70003F7A6C /* BaseViewController.h */; };
-		CE7BFB241A023681003F7A6C /* Model.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA141A022D70003F7A6C /* Model.h */; };
-		CE7BFB251A023681003F7A6C /* ModelSqlEngine.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA161A022D70003F7A6C /* ModelSqlEngine.h */; };
 		CE7BFB261A023681003F7A6C /* PullTableViewController.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA1D1A022D70003F7A6C /* PullTableViewController.h */; };
-		CE7BFB271A023681003F7A6C /* SqlTemplate.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA201A022D70003F7A6C /* SqlTemplate.h */; };
 		CE7BFB281A023681003F7A6C /* TaskExecutor.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA221A022D70003F7A6C /* TaskExecutor.h */; };
 		CE7BFB291A023681003F7A6C /* TextSizer.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA241A022D70003F7A6C /* TextSizer.h */; };
 		CE7BFB2A1A023681003F7A6C /* Utility.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA281A022D70003F7A6C /* Utility.h */; };
@@ -168,7 +166,6 @@
 				CE4BF1371A037FA600A7BBBC /* NSData+Ext.h in Copy Files */,
 				CE4BF1381A037FA600A7BBBC /* NSString+Ext.h in Copy Files */,
 				CE4BF1351A037F8C00A7BBBC /* RealmContext.h in Copy Files */,
-				CE6E69DC1A032C2F002F7E22 /* mongoose.h in Copy Files */,
 				CE6E69BD1A031C97002F7E22 /* PBObjcWrapper.hh in Copy Files */,
 				CEBD47481A0286120020CC16 /* PBObjc.hh in Copy Files */,
 				CE7BFC311A023C4D003F7A6C /* sdk.h in Copy Files */,
@@ -193,10 +190,7 @@
 				CE7BFB211A023681003F7A6C /* Audio.h in Copy Files */,
 				CE7BFB221A023681003F7A6C /* AudioPlayerView.h in Copy Files */,
 				CE7BFB231A023681003F7A6C /* BaseViewController.h in Copy Files */,
-				CE7BFB241A023681003F7A6C /* Model.h in Copy Files */,
-				CE7BFB251A023681003F7A6C /* ModelSqlEngine.h in Copy Files */,
 				CE7BFB261A023681003F7A6C /* PullTableViewController.h in Copy Files */,
-				CE7BFB271A023681003F7A6C /* SqlTemplate.h in Copy Files */,
 				CE7BFB281A023681003F7A6C /* TaskExecutor.h in Copy Files */,
 				CE7BFB291A023681003F7A6C /* TextSizer.h in Copy Files */,
 				CE7BFB2A1A023681003F7A6C /* Utility.h in Copy Files */,
@@ -214,6 +208,7 @@
 
 /* Begin PBXFileReference section */
 		706F2E9A34B6F970A5153C30 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		84ECC916381902B212B4B25F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9456C7D13870914EB20B08E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CE4BF1221A03726F00A7BBBC /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
 		CE4BF1231A03726F00A7BBBC /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
@@ -223,9 +218,17 @@
 		CE4BF1291A03726F00A7BBBC /* NSString+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Ext.m"; sourceTree = "<group>"; };
 		CE4BF1321A037A9900A7BBBC /* RealmContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmContext.h; sourceTree = "<group>"; };
 		CE4BF1331A037A9900A7BBBC /* RealmContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmContext.m; sourceTree = "<group>"; };
+		CE5EA71C1AE35EBF00E80E4D /* LPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPlaceholderTextView.h; sourceTree = "<group>"; };
+		CE5EA71D1AE35EBF00E80E4D /* LPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPlaceholderTextView.m; sourceTree = "<group>"; };
+		CE5EA71E1AE35EBF00E80E4D /* UIImageEdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEdView.h; sourceTree = "<group>"; };
+		CE5EA71F1AE35EBF00E80E4D /* UIImageEdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEdView.m; sourceTree = "<group>"; };
+		CE5EA7211AE35EBF00E80E4D /* UIViewController+ImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ImagePicker.h"; sourceTree = "<group>"; };
+		CE5EA7221AE35EBF00E80E4D /* UIViewController+ImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ImagePicker.m"; sourceTree = "<group>"; };
+		CE5EA7231AE35EBF00E80E4D /* UIViewController+SearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SearchBar.h"; sourceTree = "<group>"; };
+		CE5EA7241AE35EBF00E80E4D /* UIViewController+SearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SearchBar.m"; sourceTree = "<group>"; };
+		CE5EA72E1AE3638B00E80E4D /* KMobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMobClick.h; sourceTree = "<group>"; };
+		CE5EA72F1AE3638B00E80E4D /* KMobClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMobClick.m; sourceTree = "<group>"; };
 		CE6E69BC1A03176D002F7E22 /* PBObjcWrapper.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PBObjcWrapper.hh; sourceTree = "<group>"; };
-		CE6E69D91A032BF4002F7E22 /* mongoose.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mongoose.c; sourceTree = "<group>"; };
-		CE6E69DA1A032BF4002F7E22 /* mongoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mongoose.h; sourceTree = "<group>"; };
 		CE7BF98F1A022B57003F7A6C /* libAppBootstrap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppBootstrap.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7BF9921A022B57003F7A6C /* AppBootstrap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppBootstrap.h; sourceTree = "<group>"; };
 		CE7BF9941A022B57003F7A6C /* AppBootstrap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppBootstrap.m; sourceTree = "<group>"; };
@@ -278,18 +281,12 @@
 		CE7BFA111A022D70003F7A6C /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		CE7BFA121A022D70003F7A6C /* DeviceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceHelper.h; sourceTree = "<group>"; };
 		CE7BFA131A022D70003F7A6C /* DeviceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceHelper.m; sourceTree = "<group>"; };
-		CE7BFA141A022D70003F7A6C /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
-		CE7BFA151A022D70003F7A6C /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
-		CE7BFA161A022D70003F7A6C /* ModelSqlEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelSqlEngine.h; sourceTree = "<group>"; };
-		CE7BFA171A022D70003F7A6C /* ModelSqlEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelSqlEngine.m; sourceTree = "<group>"; };
 		CE7BFA1A1A022D70003F7A6C /* PAppResponse.pb.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PAppResponse.pb.hh; sourceTree = "<group>"; };
 		CE7BFA1B1A022D70003F7A6C /* PAppResponse.pb.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PAppResponse.pb.mm; sourceTree = "<group>"; };
 		CE7BFA1C1A022D70003F7A6C /* PAppResponse.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PAppResponse.proto; sourceTree = "<group>"; };
 		CE7BFA1D1A022D70003F7A6C /* PullTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullTableViewController.h; sourceTree = "<group>"; };
 		CE7BFA1E1A022D70003F7A6C /* PullTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullTableViewController.m; sourceTree = "<group>"; };
 		CE7BFA1F1A022D70003F7A6C /* sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdk.h; sourceTree = "<group>"; };
-		CE7BFA201A022D70003F7A6C /* SqlTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqlTemplate.h; sourceTree = "<group>"; };
-		CE7BFA211A022D70003F7A6C /* SqlTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqlTemplate.m; sourceTree = "<group>"; };
 		CE7BFA221A022D70003F7A6C /* TaskExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskExecutor.h; sourceTree = "<group>"; };
 		CE7BFA231A022D70003F7A6C /* TaskExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskExecutor.m; sourceTree = "<group>"; };
 		CE7BFA241A022D70003F7A6C /* TextSizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextSizer.h; sourceTree = "<group>"; };
@@ -381,6 +378,7 @@
 				CE7BFAF01A022E23003F7A6C /* AVFoundation.framework in Frameworks */,
 				CE7BFAEF1A022E1D003F7A6C /* AudioToolbox.framework in Frameworks */,
 				CE7BFAEE1A022E15003F7A6C /* AdSupport.framework in Frameworks */,
+				05F3E8D2D4D18682378044B7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,14 +415,13 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		CE6E69D81A032BF4002F7E22 /* Mongoose */ = {
+		CE5EA72D1AE3638B00E80E4D /* Umeng */ = {
 			isa = PBXGroup;
 			children = (
-				CE6E69D91A032BF4002F7E22 /* mongoose.c */,
-				CE6E69DA1A032BF4002F7E22 /* mongoose.h */,
+				CE5EA72E1AE3638B00E80E4D /* KMobClick.h */,
+				CE5EA72F1AE3638B00E80E4D /* KMobClick.m */,
 			);
-			name = Mongoose;
-			path = ../../include/baidu/Mongoose;
+			path = Umeng;
 			sourceTree = "<group>";
 		};
 		CE7BF9861A022B57003F7A6C = {
@@ -450,8 +447,8 @@
 		CE7BF9911A022B57003F7A6C /* AppBootstrap */ = {
 			isa = PBXGroup;
 			children = (
+				CE5EA72D1AE3638B00E80E4D /* Umeng */,
 				CE4BF11F1A0371E300A7BBBC /* Category */,
-				CE6E69D81A032BF4002F7E22 /* Mongoose */,
 				CE7BF9A91A022D70003F7A6C /* AESCrypt */,
 				CE7BF9B21A022D70003F7A6C /* App-Prefix.pch */,
 				CE7BF9E61A022D70003F7A6C /* Controls */,
@@ -501,10 +498,14 @@
 				CE7BF9EA1A022D70003F7A6C /* FHSegmentedViewController.m */,
 				CE7BF9EB1A022D70003F7A6C /* HYCircleLoadingView.h */,
 				CE7BF9EC1A022D70003F7A6C /* HYCircleLoadingView.m */,
+				CE5EA71C1AE35EBF00E80E4D /* LPlaceholderTextView.h */,
+				CE5EA71D1AE35EBF00E80E4D /* LPlaceholderTextView.m */,
 				CE7BF9ED1A022D70003F7A6C /* MBProgressHUD.h */,
 				CE7BF9EE1A022D70003F7A6C /* MBProgressHUD.m */,
 				CE7BF9EF1A022D70003F7A6C /* UIImage+ImageEffects.h */,
 				CE7BF9F01A022D70003F7A6C /* UIImage+ImageEffects.m */,
+				CE5EA71E1AE35EBF00E80E4D /* UIImageEdView.h */,
+				CE5EA71F1AE35EBF00E80E4D /* UIImageEdView.m */,
 				CE7BF9F11A022D70003F7A6C /* UIImageView+Ext.h */,
 				CE7BF9F21A022D70003F7A6C /* UIImageView+Ext.m */,
 				CE7BF9F31A022D70003F7A6C /* UIImageView+LBBlurredImage.h */,
@@ -519,6 +520,10 @@
 				CE7BF9FC1A022D70003F7A6C /* UIViewController+CWPopup.m */,
 				CE7BF9FD1A022D70003F7A6C /* UIViewController+Ext.h */,
 				CE7BF9FE1A022D70003F7A6C /* UIViewController+Ext.m */,
+				CE5EA7211AE35EBF00E80E4D /* UIViewController+ImagePicker.h */,
+				CE5EA7221AE35EBF00E80E4D /* UIViewController+ImagePicker.m */,
+				CE5EA7231AE35EBF00E80E4D /* UIViewController+SearchBar.h */,
+				CE5EA7241AE35EBF00E80E4D /* UIViewController+SearchBar.m */,
 				CE7BF9FF1A022D70003F7A6C /* UIViewController+Social.h */,
 				CE7BFA001A022D70003F7A6C /* UIViewController+Social.m */,
 				CE7BFA011A022D70003F7A6C /* UIViewController+TAPKeyboardPop.h */,
@@ -546,10 +551,6 @@
 				CE7BFA111A022D70003F7A6C /* BaseViewController.m */,
 				CE7BFA121A022D70003F7A6C /* DeviceHelper.h */,
 				CE7BFA131A022D70003F7A6C /* DeviceHelper.m */,
-				CE7BFA141A022D70003F7A6C /* Model.h */,
-				CE7BFA151A022D70003F7A6C /* Model.m */,
-				CE7BFA161A022D70003F7A6C /* ModelSqlEngine.h */,
-				CE7BFA171A022D70003F7A6C /* ModelSqlEngine.m */,
 				CE7BFA1A1A022D70003F7A6C /* PAppResponse.pb.hh */,
 				CE7BFA1B1A022D70003F7A6C /* PAppResponse.pb.mm */,
 				CE7BFA1C1A022D70003F7A6C /* PAppResponse.proto */,
@@ -559,8 +560,6 @@
 				CE7BFA1D1A022D70003F7A6C /* PullTableViewController.h */,
 				CE7BFA1E1A022D70003F7A6C /* PullTableViewController.m */,
 				CE7BFA1F1A022D70003F7A6C /* sdk.h */,
-				CE7BFA201A022D70003F7A6C /* SqlTemplate.h */,
-				CE7BFA211A022D70003F7A6C /* SqlTemplate.m */,
 				CE7BFA221A022D70003F7A6C /* TaskExecutor.h */,
 				CE7BFA231A022D70003F7A6C /* TaskExecutor.m */,
 				CE7BFA241A022D70003F7A6C /* TextSizer.h */,
@@ -660,6 +659,7 @@
 				CE7BFADE1A022DC1003F7A6C /* Security.framework */,
 				CE7BFADF1A022DC1003F7A6C /* SystemConfiguration.framework */,
 				CE7BFAE01A022DC1003F7A6C /* UIKit.framework */,
+				84ECC916381902B212B4B25F /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -822,20 +822,22 @@
 			files = (
 				CE6E69BF1A0321B6002F7E22 /* PBObjc.mm in Sources */,
 				CE7BFAC31A022D70003F7A6C /* DOUAudioRenderer.m in Sources */,
+				CE5EA7271AE35EBF00E80E4D /* LPlaceholderTextView.m in Sources */,
 				CE4BF12E1A03726F00A7BBBC /* NSData+Ext.m in Sources */,
+				CE5EA7281AE35EBF00E80E4D /* UIImageEdView.m in Sources */,
 				CE7BFAA91A022D70003F7A6C /* UIViewController+TAPKeyboardPop.m in Sources */,
 				CE7BFAB81A022D70003F7A6C /* TaskExecutor.m in Sources */,
-				CE7BFAB31A022D70003F7A6C /* ModelSqlEngine.m in Sources */,
 				CE7BFACD1A022D70003F7A6C /* POVoiceHUD.m in Sources */,
+				CE5EA7301AE3638B00E80E4D /* KMobClick.m in Sources */,
 				CE7BFAC51A022D70003F7A6C /* DOUSimpleHTTPRequest.m in Sources */,
 				CE7BFA9E1A022D70003F7A6C /* HYCircleLoadingView.m in Sources */,
+				CE5EA72A1AE35EBF00E80E4D /* UIViewController+ImagePicker.m in Sources */,
 				CE7BFAA31A022D70003F7A6C /* UILabel+Ext.m in Sources */,
 				CE4BF1301A03726F00A7BBBC /* NSString+Ext.m in Sources */,
 				CE7BFAA51A022D70003F7A6C /* UIViewController+Ads.m in Sources */,
 				CE7BFAAF1A022D70003F7A6C /* AudioPlayerView.m in Sources */,
 				CE7BFAA81A022D70003F7A6C /* UIViewController+Social.m in Sources */,
 				CE7BFABE1A022D70003F7A6C /* DOUAudioEventLoop.m in Sources */,
-				CE7BFAB21A022D70003F7A6C /* Model.m in Sources */,
 				CE7BFAC41A022D70003F7A6C /* DOUAudioStreamer.m in Sources */,
 				CE7BFABB1A022D70003F7A6C /* Utility.m in Sources */,
 				CE4BF12D1A03726F00A7BBBC /* NSData+CommonCrypto.m in Sources */,
@@ -848,7 +850,6 @@
 				CE7BFA9C1A022D70003F7A6C /* CMPopTipView.m in Sources */,
 				CE7BFAB01A022D70003F7A6C /* BaseViewController.m in Sources */,
 				CE7BFAA21A022D70003F7A6C /* UIImageView+LBBlurredImage.m in Sources */,
-				CE6E69DB1A032BF4002F7E22 /* mongoose.c in Sources */,
 				CE4BF1341A037A9900A7BBBC /* RealmContext.m in Sources */,
 				CE7BFAC21A022D70003F7A6C /* DOUAudioPlaybackItem.m in Sources */,
 				CE7BFABA1A022D70003F7A6C /* TSAppResponse.mm in Sources */,
@@ -856,13 +857,13 @@
 				CE7BFAAB1A022D70003F7A6C /* APIStub.m in Sources */,
 				CE7BFAC81A022D70003F7A6C /* NSDate+Helper.m in Sources */,
 				CE7BFA861A022D70003F7A6C /* AESCrypt.m in Sources */,
-				CE7BFAB71A022D70003F7A6C /* SqlTemplate.m in Sources */,
 				CE7BFAA01A022D70003F7A6C /* UIImage+ImageEffects.m in Sources */,
 				CE7BFA9D1A022D70003F7A6C /* FHSegmentedViewController.m in Sources */,
 				CE7BFAA11A022D70003F7A6C /* UIImageView+Ext.m in Sources */,
 				CE7BFAAD1A022D70003F7A6C /* AppSession.m in Sources */,
 				CE7BFA9F1A022D70003F7A6C /* MBProgressHUD.m in Sources */,
 				CE7BF9951A022B57003F7A6C /* AppBootstrap.m in Sources */,
+				CE5EA72B1AE35EBF00E80E4D /* UIViewController+SearchBar.m in Sources */,
 				CE7BFABC1A022D70003F7A6C /* XibFactory.m in Sources */,
 				CE7BFAB61A022D70003F7A6C /* PullTableViewController.m in Sources */,
 				CE7BFAAA1A022D70003F7A6C /* APIClient.m in Sources */,
@@ -1033,6 +1034,10 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				WARNING_CFLAGS = (
+					"-Wno-format",
+					"-Wno-shorten-64-to-32",
+				);
 			};
 			name = Debug;
 		};
@@ -1057,6 +1062,10 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				WARNING_CFLAGS = (
+					"-Wno-format",
+					"-Wno-shorten-64-to-32",
+				);
 			};
 			name = Release;
 		};
@@ -1100,6 +1109,7 @@
 				CE48152B1A15E49B0037EFA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE7BF98A1A022B57003F7A6C /* Build configuration list for PBXProject "AppBootstrap" */ = {
 			isa = XCConfigurationList;

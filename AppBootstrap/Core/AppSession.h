@@ -14,6 +14,7 @@
 #define kNotification @"Notification"
 #define kAppModeServer @"server"
 #define kAppModeLocal @"local"
+#define kConfigAppUrlBase @"ApiBaseUrl"
 
 @interface AppSession : NSObject
 
@@ -24,8 +25,9 @@
 @property(nonatomic, strong) NSString* userName; //用户邮箱用户名
 @property(nonatomic, strong) NSNumber* userId;  //用户数据库ID
 @property(nonatomic, strong) NSString* secret;  //会话Salt
-@property(nonatomic, strong) NSString* signinDate; //登录日期
+@property(nonatomic, strong) NSDate* signinDate; //登录日期
 @property(nonatomic, strong) NSString* profileImageUrl; //头像
+@property(nonatomic, strong) NSString* userKind; //用户类型
 
 @property(nonatomic, strong) NSString* appName; //应用业务名称
 @property(nonatomic, strong) NSString* deviceName; //设备名称
@@ -43,6 +45,10 @@
 @property(strong, nonatomic) NSMutableDictionary *config;
 @property(strong, nonatomic) NSMutableDictionary *flash;
 @property(strong, nonatomic) NSString* appMode;
+
+@property float latitude;
+@property float longitude;
+@property long cityId;
 
 //是否匿名
 - (BOOL)isAnonymous;

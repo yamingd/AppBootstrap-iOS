@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#ifdef __BAIDU_ADS__
+
 #import "BaiduMobAdDelegateProtocol.h"
 #import "BaiduMobAdInterstitialDelegate.h"
 #import "BaiduMobAdView.h"
@@ -29,3 +32,5 @@
 -(void)hideInterstitialAds;
 
 @end
+
+#endif

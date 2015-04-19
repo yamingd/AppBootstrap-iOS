@@ -8,6 +8,8 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "Audio.h"
+#import "DOUAudioStreamer.h"
+#import "DOUAudioVisualizer.h"
 
 @interface AudioPlayerView : NSObject
 

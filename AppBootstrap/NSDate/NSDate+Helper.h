@@ -67,4 +67,6 @@
 + (NSString *)timestampFormatStringSS;
 + (NSString *)dbFormatString;
 
+- (BOOL)sameDayAs:(NSDate*)another;
+
 @end

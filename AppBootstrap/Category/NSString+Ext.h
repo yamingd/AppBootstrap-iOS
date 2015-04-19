@@ -14,6 +14,6 @@
 -(NSString *)unescapeUnicode;
 -(NSString *)md5;
 -(NSString *)hmac:(NSString*)secret;
-+ (NSString *)base64StringFromData:(NSData *)data length:(NSUInteger)length;
++(NSString *)base64StringFromData:(NSData *)data length:(NSUInteger)length;
 
 @end

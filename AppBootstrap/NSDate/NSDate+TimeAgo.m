@@ -113,13 +113,13 @@ NSLocalizedStringFromTableInBundle(key, @"NSDateTimeAgo", [NSBundle bundleWithPa
         }
         return [self stringFromFormat:@"%%d %@months ago" withValue:components.month];
     }
-    else if (components.week >= 1)
+    else if (components.weekOfYear >= 1)
     {
-        if (components.week == 1)
+        if (components.weekOfYear == 1)
         {
             return NSDateTimeAgoLocalizedStrings(@"1 week ago");
         }
-        return [self stringFromFormat:@"%%d %@weeks ago" withValue:components.week];
+        return [self stringFromFormat:@"%%d %@weeks ago" withValue:components.weekOfYear];
     }
     else if (components.day >= 1)    // up to 6 days ago
     {

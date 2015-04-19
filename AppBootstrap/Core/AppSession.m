@@ -12,6 +12,7 @@
 #import "NSString+Ext.h"
 #import "NSData+Ext.h"
 #import "NSData+CommonCrypto.h"
+#import "APIClient.h"
 
 @implementation AppSession
 
@@ -22,6 +23,7 @@
         _shared = [[AppSession alloc] init];
         _shared.apnsEnabled = 0;
         _shared.flash = [[NSMutableDictionary alloc] init];
+        _shared.userId = @(0);
         
         NSString *path = [[NSBundle mainBundle] pathForResource:@"app" ofType:@"plist"];
         assert(path);
@@ -33,7 +35,7 @@
     return _shared;
 }
 
-@synthesize sessionId, userName, realName, secret, signinDate;
+@synthesize sessionId, userName, realName, secret, signinDate, userKind;
 @synthesize deviceName, deviceScreenSize, deviceId, deviceToken;
 @synthesize osName, osVersion;
 @synthesize packageName, packageVersion, profileImageUrl;
@@ -69,7 +71,7 @@
     [dict setValue:self.secret forKey:@"secret"];
     [dict setValue:self.userId forKey:@"userId"];
     [dict setValue:self.deviceToken forKey:@"deviceToken"];
-    [dict setValue:self.signinDate forKey:@"signinDate"];
+    [dict setValue:self.userKind forKey:@"userKind"];
     [dict setValue:self.profileImageUrl forKey:@"profileImageUrl"];
     [dict setValue:self.apnsEnabled forKey:@"apnsEnabled"];
     
@@ -117,34 +119,29 @@
     [dict setValue:self.deviceName forKey:@"X-client"];
     [dict setValue:self.packageVersion forKey:@"X-ver"]; //客户端版本标示，用于跟踪使用情况
     [dict setValue:[[[AppSession current] getLocale] objectForKey:NSLocaleLanguageCode] forKeyPath:@"x-lang"];
-    //Configuration
-    NSString *signed_key = [self.config objectForKey:@"AppSecret"];
-    assert(signed_key);
-    if (signed_key!=nil && signed_key.length > 0) {
-        NSString* data = [NSString stringWithFormat:@"%@%@%@", self.deviceId, self.appName, self.sessionId];
-        LOG(@"signed_key: %@", signed_key);
-        LOG(@"data: %@", data);
-        [dict setValue:[data hmac:signed_key] forKey:@"X-signed"];
-    }
     //cookie
     NSString* cookieId = [self.config objectForKey:@"CookieId"];
     if (cookieId !=nil ) {
         NSString* cookieSecret = [[self.config objectForKey:@"CookieSecret"] md5];
-        long timestamp = 1000 * [[NSDate date] timeIntervalSince1970];
+        NSString* timestamp = [NSString stringWithFormat:@"%f", [[NSDate date] timeIntervalSince1970]];
         NSData* ds = [[self.userId stringValue] dataUsingEncoding:NSUTF8StringEncoding];
         NSString* uv = [NSString base64StringFromData:ds length:ds.length];
-        LOG(@"uv:%@", uv);
-        LOG(@"timestamp:%ld", timestamp);
-        LOG(@"secret:%@", secret);
-        NSString* sign = [NSString stringWithFormat:@"%ld|%@|%@|%@", timestamp, cookieSecret, cookieId, uv];
+        //uv = [Utility urlEscape:uv];
+        //LOG(@"uv:%@", uv);
+        timestamp = [[timestamp componentsSeparatedByString:@"."] objectAtIndex:0];
+        //LOG(@"timestamp:%@", timestamp);
+        //LOG(@"secret:%@", secret);
+        NSString* sign = [NSString stringWithFormat:@"%@|%@|%@|%@", timestamp, cookieSecret, cookieId, uv];
         ds = [[sign dataUsingEncoding:NSUTF8StringEncoding] SHA256Hash];
-        sign = [ds hexString];
-        sign = [NSString stringWithFormat:@"%@|%ld|%@", uv, timestamp, sign];
+        sign = [Utility dataHex:ds];
+        //LOG(@"sign:%@", sign);
+        sign = [NSString stringWithFormat:@"%@|%@|%@", uv, timestamp, sign];
+        //sign = [Utility urlEscape:sign];
         LOG(@"x-auth:%@", sign);
         [dict setValue:sign forKey:@"X-auth"];
     }
     
-    LOG(@"header: %@", dict);
+    //LOG(@"header: %@", dict);
     return dict;
 }
 
@@ -186,16 +183,23 @@
     //save session to local file
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString* jsonData = [self asJSON];
+    LOG(@"json:%@", jsonData);
     NSString* salt = [self.config objectForKey:@"AppSessionSalt"];
     NSString* encdata = [AESCrypt encrypt:jsonData password:salt];
     [defaults setValue:encdata forKey:kSessionCacheKey];
     [defaults synchronize];
+    
+    [[APIClient sharedClient] resetHeaderValue];
+    
 }
 
 -(void)clear{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults removeObjectForKey:kSessionCacheKey];
     [defaults synchronize];
+    
+    self.userId = @(0);
+    [[APIClient sharedClient] resetHeaderValue];
 }
 - (void)load{
     //load session from local file.
@@ -216,7 +220,7 @@
     self.deviceScreenSize = [DeviceHelper getScreenSize];
     self.packageName = [DeviceHelper getAppName];
     self.packageVersion = [DeviceHelper getAppVersion];
-    
+    self.deviceToken = @"NULL";
     NSString *tmpId = [self.config objectForKey:@"AppDeviceId"];
     if (tmpId != nil) {
         self.deviceId = tmpId;

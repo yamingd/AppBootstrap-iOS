@@ -1,1 +1,0 @@
-../../../../../GoogleProtobuf/src/google/protobuf/wire_format.h

@@ -7,18 +7,25 @@
 //
 
 #import "AppBootstrap.h"
-#import "Appirater.h"
 #import "UMSocial.h"
 #import "UMSocialQQHandler.h"
 #import "UMSocialWechatHandler.h"
-#import "MobClick.h"
+#import "KMobClick.h"
+#import "AFNetworking/AFNetworkActivityIndicatorManager.h"
+#import "AFNetworkActivityLogger/AFNetworkActivityLogger.h"
 
 @implementation AppBootstrap
 
 -(void)init3rdOptions{
+    [[AFNetworkActivityLogger sharedLogger] startLogging];
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     
     NSString* appKey = [[AppSession current].config objectForKey:@"AppUMengId"];
-    [UMSocialData setAppKey:appKey];
+    BOOL appUMengEnable = [[[AppSession current].config objectForKey:@"AppUMengEnable"] boolValue];
+    
+    if (appUMengEnable) {
+        [UMSocialData setAppKey:appKey];
+    }
     
     NSDictionary* qq = [[AppSession current].config objectForKey:@"QQ"];
     NSString* storeUrl = [[AppSession current].config objectForKey:@"StoreUrl"];
@@ -27,11 +34,7 @@
         [UMSocialWechatHandler setWXAppId:[qq objectForKey:@"wxId"] appSecret:[qq objectForKey:@"wxSecret"] url:storeUrl];
     }
     
-#ifndef DEBUG
-    [MobClick setCrashReportEnabled:YES];
-    [MobClick startWithAppkey:appKey reportPolicy:SENDWIFIONLY channelId:nil];
-#endif
-    
+    [KMobClick start];
 }
 -(void)initRootController{
     //TODO: implement in subclass.
@@ -44,16 +47,17 @@
      [self.window setRootViewController:self.navController];
      */
 }
+- (void)setRootController:(UIViewController *)vc
+{
+    [self.window setRootViewController:vc];
+}
 -(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     
     LOG(@"willFinishLaunchingWithOptions");
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    if(OSVersionIsAtLeastiOS7()){
-        UIColor * tintColor = [UIColor colorWithRed:29.0/255.0
-                                              green:173.0/255.0
-                                               blue:234.0/255.0
-                                              alpha:1.0];
-        [self.window setTintColor:tintColor];
+    if(OSVersionIsAtLeastiOS7){
+        [self.window setTintColor:kColor_tint];
+        [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:kColor_text}];
     }
     
     [self initRootController];
@@ -86,22 +90,7 @@
     return YES;
     
 }
--(void)initRateLaunch{
-    NSString* appId = [[AppSession current].config objectForKey:@"AppId"];
-    
-    [Appirater setAppId:appId];
-    [Appirater setDaysUntilPrompt:5];
-    [Appirater setUsesUntilPrompt:5];
-    [Appirater setSignificantEventsUntilPrompt:-1];
-    [Appirater setTimeBeforeReminding:2];
-#ifdef DEBUG
-    [Appirater setDebug:YES];
-#else
-    [Appirater setDebug:NO];
-#endif
-    //[Appirater appLaunched:YES];
-    
-}
+
 - (BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder{
     return YES;
 }
@@ -128,7 +117,6 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    [Appirater appEnteredForeground:YES];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

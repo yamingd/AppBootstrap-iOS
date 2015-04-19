@@ -40,4 +40,14 @@
     return nil;
 }
 
++ (id)productWithStoryboardIdentifier:(NSString *)identifier
+{
+    return [self productWithStoryboardName:kMainStoryboardName identifier:identifier];
+}
+
++ (id)productWithStoryboardName:(NSString *)storyboardName identifier:(NSString *)identifier;
+{
+    return [[UIStoryboard storyboardWithName:storyboardName bundle:nil] instantiateViewControllerWithIdentifier:identifier];
+}
+
 @end

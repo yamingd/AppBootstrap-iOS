@@ -1,6 +1,6 @@
 
 #import "BaseViewController.h"
-#import "MobClick.h"
+#import "KMobClick.h"
 
 @interface BaseViewController (){
     
@@ -44,18 +44,18 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [MobClick beginLogPageView:NSStringFromClass([self class])];
+    [KMobClick beginLogPageView:NSStringFromClass([self class])];
     
 }
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [MobClick endLogPageView:NSStringFromClass([self class])];
+    [KMobClick endLogPageView:NSStringFromClass([self class])];
 
 }
 
 -(void)logClickEvent:(NSString*)name data:(NSDictionary*)data{
-    [MobClick event:name attributes:data];
+    [KMobClick event:name attributes:data];
 }
 
 @end

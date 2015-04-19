@@ -46,14 +46,18 @@
     for (NSString* key in params) {
         NSString *sKey = [key description];
         NSString *sVal = [[params objectForKey:key] description];
+        //LOG(@"%@=%@", sKey, sVal);
         [req setValue:sVal forHTTPHeaderField:sKey];
     }
+}
+-(void)resetHeaderValue{
+    [self setHeaderValue:self.requestSerializer];
 }
 -(id)parseError:(NSError *)error{
     LOG(@"Error:%@", error);
     if ([self.format isEqualToString:X_PROTOBUF_V]) {
         TSAppResponse* resp = [[TSAppResponse alloc] init];
-        resp.code = [NSNumber numberWithLong:error.code];
+        resp.code = error.code;
         if ([error code] == -1001 || [error code] == -1009) {
             resp.msg = @"Network is unstable. connection timeout";
             [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationNetworkError object:nil userInfo:nil];
@@ -81,8 +85,8 @@
     }else{
         return [[AppResponse alloc] initWith:data];
     }
-    
 }
+
 -(void) query:(NSString *)urlString
        params:(NSDictionary *)params
         block:(void (^)(id response, NSError* error))block{
@@ -90,9 +94,30 @@
     LOG(@"query: %@", urlString);
 #endif
     [self GET:urlString parameters:params success:^(AFHTTPRequestOperation *operation, id data) {
-        id resp = [self parseData:data];
-        if (block) {
-            block(resp, nil);
+        NSError* error = nil;
+        if ([self.format isEqualToString:X_PROTOBUF_V]) {
+            TSAppResponse* resp = [self parseData:data];
+            if (resp.code > 200) {
+                error = [NSError errorWithDomain:resp.msg code:resp.code userInfo:@{@"ex": resp.errors}];
+                block(resp, error);
+                if (resp.code == 500) {
+                    [self showNetworkErrorToast:@"服务器走神了～"];
+                }
+                
+            }else{
+                block(resp, nil);
+            }
+        }else{
+            AppResponse* resp = [self parseData:data];
+            if (resp.code.intValue > 200) {
+                error = [NSError errorWithDomain:resp.msg code:resp.code.intValue userInfo:nil];
+                block(resp, error);
+                if (resp.code.intValue == 500) {
+                    [self showNetworkErrorToast:@"服务器走神了～"];
+                }
+            }else{
+                block(resp, nil);
+            }
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         LOG(@"Error:%@", error);
@@ -100,6 +125,13 @@
         if (block) {
             block(resp, error);
         }
+        
+        if (error.code == -1001) {
+            [self showNetworkErrorToast:@"请求超时～"];
+        } else {
+            [self showNetworkErrorToast:@"服务器走神了～"];
+        }
+        
     }];
     
     /*
@@ -127,15 +159,37 @@
     LOG(@"postForm: %@", urlString);
 #endif
     [self POST:urlString parameters:params success:^(AFHTTPRequestOperation *operation, id data) {
-        id resp = [self parseData:data];
-        if (block) {
-            block(resp, nil);
+        NSError* error = nil;
+        if ([self.format isEqualToString:X_PROTOBUF_V]) {
+            TSAppResponse* resp = [self parseData:data];
+            if (resp.code > 200) {
+                error = [NSError errorWithDomain:resp.msg code:resp.code userInfo:@{@"ex": resp.errors}];
+                block(resp, error);
+                if (resp.code == 500) {
+                    [self showNetworkErrorToast:@"服务器走神了～"];
+                }
+            }else{
+                block(resp, nil);
+            }
+        }else{
+            AppResponse* resp = [self parseData:data];
+            if (resp.code.intValue > 200) {
+                error = [NSError errorWithDomain:resp.msg code:resp.code.intValue userInfo:nil];
+                block(resp, error);
+                if (resp.code.intValue == 500) {
+                    [self showNetworkErrorToast:@"服务器走神了～"];
+                }
+            }else{
+                block(resp, nil);
+            }
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         id resp = [self parseError:error];
         if (block) {
             block(resp, error);
         }
+        
+        [self showNetworkErrorToast:@"网络走神了～"];
     }];
     
     /*
@@ -161,15 +215,37 @@
     LOG(@"postXForm: %@", urlString);
 #endif
     [self POST:urlString parameters:params constructingBodyWithBlock:formBody success:^(AFHTTPRequestOperation *operation, id data) {
-        id resp = [self parseData:data];
-        if (block) {
-            block(resp, nil);
+        NSError* error = nil;
+        if ([self.format isEqualToString:X_PROTOBUF_V]) {
+            TSAppResponse* resp = [self parseData:data];
+            if (resp.code > 200) {
+                error = [NSError errorWithDomain:resp.msg code:resp.code userInfo:@{@"ex": resp.errors}];
+                block(resp, error);
+                if (resp.code == 500) {
+                    [self showNetworkErrorToast:@"服务器走神了～"];
+                }
+            }else{
+                block(resp, nil);
+            }
+        }else{
+            AppResponse* resp = [self parseData:data];
+            if (resp.code.intValue > 200) {
+                error = [NSError errorWithDomain:resp.msg code:resp.code.intValue userInfo:nil];
+                block(resp, error);
+                if (resp.code.intValue == 500) {
+                    [self showNetworkErrorToast:@"服务器走神了～"];
+                }
+            }else{
+                block(resp, nil);
+            }
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         id resp = [self parseError:error];
         if (block) {
             block(resp, error);
         }
+        
+        [self showNetworkErrorToast:@"网络走神了～"];
     }];
     
     /*
@@ -184,6 +260,17 @@
             block(resp, error);
         }
     }];*/
+}
+
+- (void)showNetworkErrorToast:(NSString *)text
+{
+#if AppConfig_showNetworkErrorToast
+    [[[UIApplication sharedApplication] keyWindow] showToast:text];
+#endif
+}
+
+-(void)test{
+    
 }
 
 -(AFHTTPRequestOperation*)download:(NSString*)urlString
@@ -207,7 +294,6 @@
     operation.outputStream=[[NSOutputStream alloc] initToFileAtPath:tmpPath append:NO];
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        LOG(@"response: %@", responseObject);
         NSError *moveError = nil;
         [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
         [[NSFileManager defaultManager] moveItemAtPath:tmpPath toPath:filePath error:&moveError];
@@ -223,6 +309,49 @@
         if (complete) {
             complete(false,nil);
         }
+    }];
+    
+    [operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
+        //LOG(@"download process: %.2lld%% (%ld/%ld)",100*totalBytesRead/totalBytesExpectedToRead,(long)totalBytesRead,(long)totalBytesExpectedToRead);
+        if (process) {
+            process(totalBytesRead, totalBytesExpectedToRead);
+        }
+    }];
+    
+    [operation start];
+    
+    return operation;
+    
+}
+
+-(AFHTTPRequestOperation*)downloadNSData:(NSString*)urlString
+                                 process:(void (^)(long long readBytes, long long totalBytes))process
+                                complete:(void (^)(BOOL successed, NSData* data))complete{
+    
+
+#ifdef DEBUG
+    LOG(@"download: %@", urlString);
+#endif
+    
+    if (!complete) {
+        return nil;
+    }
+    
+    AFHTTPRequestSerializer *serializer = [AFHTTPRequestSerializer serializer];
+    [self setHeaderValue:serializer];
+    
+    NSMutableURLRequest *request = [serializer requestWithMethod:@"GET" URLString:urlString parameters:nil error:nil];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer.acceptableContentTypes = nil;
+    
+    operation.outputStream = [[NSOutputStream alloc] initToMemory];
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        complete(YES, responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        LOG(@"get error :  %@",error);
+        complete(NO, nil);
     }];
     
     [operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {

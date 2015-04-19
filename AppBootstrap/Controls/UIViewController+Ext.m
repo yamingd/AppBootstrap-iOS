@@ -12,7 +12,7 @@
 @implementation UIViewController (Ext)
 
 -(void)ios7Fix{
-    if(OSVersionIsAtLeastiOS7()){
+    if(OSVersionIsAtLeastiOS7){
         self.automaticallyAdjustsScrollViewInsets = NO;
         self.edgesForExtendedLayout=UIRectEdgeNone;
         

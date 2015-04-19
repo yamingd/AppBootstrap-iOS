@@ -42,7 +42,7 @@
     
     if (!_segmentedControl) {
         _segmentedControl = [[UISegmentedControl alloc] init];
-        _segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
+        //_segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
         self.navigationItem.titleView = _segmentedControl;
     } else {
         [_segmentedControl removeAllSegments];

@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSDictionary *userNotification;
 
 -(void)initRootController;
+-(void)setRootController:(UIViewController *)vc;
 -(void)init3rdOptions;
 -(void)initRateLaunch;
 -(void)removeTempData;

@@ -49,7 +49,13 @@
 }
 
 -(CGSize)compound{
-    actualSize = [self.text sizeWithFont:_font constrainedToSize:_range lineBreakMode:_mode];
+    
+    NSAttributedString *attrStr = [[NSAttributedString alloc] initWithString:self.text];
+    NSRange range = NSMakeRange(0, attrStr.length);
+    NSDictionary *dic = [attrStr attributesAtIndex:0 effectiveRange:&range];
+    
+    CGRect rect = [self.text boundingRectWithSize:_range options:NSStringDrawingUsesDeviceMetrics attributes:dic context:nil];
+    actualSize =  rect.size; //[self.text sizeWithFont:_font constrainedToSize:_range lineBreakMode:_mode];
     return actualSize;
 }
 

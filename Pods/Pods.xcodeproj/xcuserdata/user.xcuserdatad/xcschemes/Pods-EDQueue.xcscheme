@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FFCF87DD5C5BD1704A0005FD"
+               BlueprintIdentifier = "182A43CD9A5B9BE97F63331E"
                BuildableName = "libPods-EDQueue.a"
                BlueprintName = "Pods-EDQueue"
                ReferencedContainer = "container:Pods.xcodeproj">

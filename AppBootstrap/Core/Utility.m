@@ -7,7 +7,6 @@
 //
 
 #import "Utility.h"
-#import "Model.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonHMAC.h>
 
@@ -22,15 +21,6 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"plist"];
     NSMutableDictionary *temp = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
     return temp;
-}
-+(NSArray*) arrayFromPlist:(NSString *)name model:(Class)mclass{
-    NSArray* temp = [Utility arrayFromPlist:name];
-    NSMutableArray* result = [[NSMutableArray alloc] init];
-    for (NSDictionary* item in temp) {
-        id mitem = [Model createWith:mclass data:item];
-        [result addObject:mitem];
-    }
-    return result;
 }
 
 + (NSString *)hmac:(NSString *)text{
@@ -152,6 +142,51 @@
         
     });
     
+}
+
++(BOOL)mobileOK:(NSString *)mobile{
+    NSString *regex = @"^((13[0-9])|(147)|(15[^4,\\D])|(18[0,5-9]))\\d{8}$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    BOOL isMatch = [pred evaluateWithObject:mobile];
+    return isMatch;
+}
+
++(id)toHumanSize:(long long)value
+{
+    double convertedValue = [[NSNumber numberWithLongLong:value] doubleValue];
+    int multiplyFactor = 0;
+    NSArray *tokens = @[@"bytes",@"KB",@"MB",@"GB",@"TB"];
+    while (convertedValue > 1024) {
+        convertedValue /= 1024;
+        multiplyFactor++;
+    }
+    return [NSString stringWithFormat:@"%4.2f %@",convertedValue, tokens[multiplyFactor]];
+}
+
++ (void)callPhone:(NSString *)phone
+{
+    if (phone.length > 0) {
+        phone = [phone stringByReplacingOccurrencesOfString:@"转" withString:@","];
+        NSURL *phoneURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",phone]];
+        [[UIApplication sharedApplication] openURL:phoneURL];
+    }
+}
+
++ (NSString*)dataHex:(NSData *)data{
+    /* Returns hexadecimal string of NSData. Empty string if data is empty.   */
+    const unsigned char *dataBuffer = (const unsigned char *)[data bytes];
+    if (!dataBuffer){
+        return [NSString string];
+    }
+    
+    NSUInteger          dataLength  = [data length];
+    NSMutableString     *hexString  = [NSMutableString stringWithCapacity:(dataLength * 2)];
+    
+    for (int i = 0; i < dataLength; ++i){
+        [hexString appendFormat:@"%02x", (unsigned int)dataBuffer[i]];
+    }
+    LOG(@"hexString: %@", hexString);
+    return [NSString stringWithString:hexString];
 }
 
 @end

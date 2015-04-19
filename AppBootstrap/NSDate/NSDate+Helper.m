@@ -114,7 +114,7 @@
     NSDateFormatter *displayFormatter = [[NSDateFormatter alloc] init];
     
 	NSDate *today = [NSDate date];
-    NSDateComponents *offsetComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) 
+    NSDateComponents *offsetComponents = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekOfYear)
 													 fromDate:today];
 	
 	NSDate *midnight = [calendar dateFromComponents:offsetComponents];
@@ -129,23 +129,26 @@
 			[displayFormatter setDateFormat:@"h:mm a"]; // 11:30 am
 		}
 	} else {
+        // check if same week
+        NSDateComponents *dateComponents = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekOfYear)
+                                                       fromDate:date];
+        
 		// check if date is within last 7 days
-		NSDateComponents *componentsToSubtract = [[NSDateComponents alloc] init];
-		[componentsToSubtract setDay:-7];
-		NSDate *lastweek = [calendar dateByAddingComponents:componentsToSubtract toDate:today options:0];
-        NSComparisonResult lastweek_result = [date compare:lastweek];
-		if (lastweek_result == NSOrderedDescending) {
+		//NSDateComponents *componentsToSubtract = [[NSDateComponents alloc] init];
+		//[componentsToSubtract setDay:-7];
+		//NSDate *lastweek = [calendar dateByAddingComponents:componentsToSubtract toDate:today options:0];
+        //NSComparisonResult lastweek_result = [date compare:lastweek];
+        
+		if ([offsetComponents year] == [dateComponents year] &&
+            [offsetComponents weekOfYear] == [dateComponents weekOfYear]) {
             if (displayTime) {
-                [displayFormatter setDateFormat:@"EEEE h:mm a"];
+                [displayFormatter setDateFormat:@"EEE h:mm a"];
             } else {
-                [displayFormatter setDateFormat:@"EEEE"]; // Tuesday
+                [displayFormatter setDateFormat:@"EEE"]; // Tuesday
             }
 		} else {
 			// check if same calendar year
 			NSInteger thisYear = [offsetComponents year];
-			
-			NSDateComponents *dateComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) 
-														   fromDate:date];
 			NSInteger thatYear = [dateComponents year];			
 			if (thatYear >= thisYear) {
                 if (displayTime) {
@@ -259,6 +262,25 @@
 	NSDate *endOfWeek = [calendar dateByAddingComponents:componentsToAdd toDate:self options:0];
 	
 	return endOfWeek;
+}
+
+- (BOOL)sameDayAs:(NSDate*)another{
+    if (another == nil) {
+        return NO;
+    }
+    
+    NSDateComponents *c0 = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:self];
+    NSDateComponents *c1 = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:another];
+    
+    if ([c0 year] == [c1 year]) {
+        if ([c0 month] == [c1 month]) {
+            if ([c0 day] == [c1 day]) {
+                return YES;
+            }
+        }
+    }
+    
+    return NO;
 }
 
 + (NSString *)dateFormatString {

@@ -60,6 +60,9 @@ static void *kDurationKVOKey = &kDurationKVOKey;
             LOG(@"Audio play occur error!~");
             [self foundError];
             break;
+        default:
+            LOG(@"default value");
+            break;
     }
 }
 

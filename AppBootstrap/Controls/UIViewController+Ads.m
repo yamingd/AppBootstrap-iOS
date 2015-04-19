@@ -9,6 +9,8 @@
 #import "UIViewController+Ads.h"
 #import "MobClick.h"
 
+#ifdef __BAIDU_ADS__
+
 @implementation UIViewController (Ads)
 
 ADD_DYNAMIC_PROPERTY(UIViewController*, adsController, setAdsController);
@@ -206,3 +208,5 @@ ADD_DYNAMIC_PROPERTY(NSNumber*, adInterRolling, setAdInterRolling);
 }
 
 @end
+
+#endif

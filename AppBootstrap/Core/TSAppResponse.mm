@@ -74,7 +74,7 @@
     return self;
 }
 
--(NSArray*) parseData:(Class)type{
+-(NSMutableArray*) parseData:(Class)type{
     NSMutableArray *dslist= [[NSMutableArray alloc] init];
     for (NSData* item in self.data) {
         id obj = [[type alloc] initWithProtocolData:item];

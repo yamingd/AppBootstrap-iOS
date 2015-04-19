@@ -24,6 +24,9 @@
 
 -(void) setHeaderValue:(AFHTTPRequestSerializer*)req;
 
+//用户变更时需要重置Header Value
+-(void) resetHeaderValue;
+
 -(void) query:(NSString *)urlString
                 params:(NSDictionary *)params
             block:(void (^)(id response, NSError* error))block;
@@ -39,6 +42,7 @@
          formBody:(void (^)(id <AFMultipartFormData> formData))formBody
           block:(void (^)(id response, NSError* error))block;
 
+-(void)test;
 
 -(AFHTTPRequestOperation*)download:(NSString*)urlString
                           filePath:(NSString *)filePath
@@ -49,6 +53,10 @@
                           filePath:(NSString *)filePath
                            process:(void (^)(long long readBytes, long long totalBytes))process
                           complete:(void (^)(BOOL successed, NSDictionary *response))complete;
+
+-(AFHTTPRequestOperation*)downloadNSData:(NSString*)urlString
+                           process:(void (^)(long long readBytes, long long totalBytes))process
+                          complete:(void (^)(BOOL successed, NSData* data))complete;
 
 +(NSString *)formatUrl:(NSString *)url args:(NSDictionary *)args;
 

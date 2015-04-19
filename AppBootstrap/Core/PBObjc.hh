@@ -12,6 +12,8 @@
 #import <string>
 #endif
 
+#define kNULL_VALUE @""
+
 @interface PBObjc : NSObject
 
 // these pre or post pend version and hmac info to serialized protocol buffer

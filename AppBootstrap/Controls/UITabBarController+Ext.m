@@ -21,7 +21,7 @@
         return;
     
     CGSize screenSize = [[UIScreen mainScreen] bounds].size;
-    BOOL isLandscape = UIDeviceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation);
+    BOOL isLandscape = UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation);
     float height =  isLandscape ? screenSize.width : screenSize.height;
     
     if (!hidden)

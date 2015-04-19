@@ -17,10 +17,12 @@
 ////////////////////////////////////////////////////////////////////////////
 
 #import "RLMQueryUtil.hpp"
+
 #import "RLMArray.h"
 #import "RLMObjectSchema_Private.hpp"
-#import "RLMObject_Private.h"
+#import "RLMObject_Private.hpp"
 #import "RLMProperty_Private.h"
+#import "RLMSchema_Private.h"
 #import "RLMUtil.hpp"
 
 #include <tightdb.hpp>
@@ -121,64 +123,29 @@ void add_bool_constraint_to_query(tightdb::Query &query,
 void add_string_constraint_to_query(tightdb::Query &query,
                                     NSPredicateOperatorType operatorType,
                                     NSComparisonPredicateOptions predicateOptions,
-                                    NSUInteger index,
+                                    Columns<String> &&column,
                                     NSString *value) {
     bool caseSensitive = !(predicateOptions & NSCaseInsensitivePredicateOption);
     bool diacriticInsensitive = (predicateOptions & NSDiacriticInsensitivePredicateOption);
-
     RLMPrecondition(!diacriticInsensitive, @"Invalid predicate option",
                     @"NSDiacriticInsensitivePredicateOption not supported for string type");
 
     tightdb::StringData sd = RLMStringDataWithNSString(value);
     switch (operatorType) {
         case NSBeginsWithPredicateOperatorType:
-            query.begins_with(index, sd, caseSensitive);
+            query.and_query(column.begins_with(sd, caseSensitive));
             break;
         case NSEndsWithPredicateOperatorType:
-            query.ends_with(index, sd, caseSensitive);
+            query.and_query(column.ends_with(sd, caseSensitive));
             break;
         case NSContainsPredicateOperatorType:
-            query.contains(index, sd, caseSensitive);
+            query.and_query(column.contains(sd, caseSensitive));
             break;
         case NSEqualToPredicateOperatorType:
-            query.equal(index, sd, caseSensitive);
+            query.and_query(column.equal(sd, caseSensitive));
             break;
         case NSNotEqualToPredicateOperatorType:
-            query.not_equal(index, sd, caseSensitive);
-            break;
-        default:
-            @throw RLMPredicateException(@"Invalid operator type",
-                                         @"Operator type %lu not supported for string type", (unsigned long)operatorType);
-    }
-}
-
-// FIXME: beginsWith, endsWith, contains missing
-// FIXME: not case sensitive
-void add_string_constraint_to_link_query(tightdb::Query& query,
-                                         NSPredicateOperatorType operatorType,
-                                         NSComparisonPredicateOptions predicateOptions,
-                                         Columns<String> &&column,
-                                         NSString *value) {
-    bool caseSensitive = !(predicateOptions & NSCaseInsensitivePredicateOption);
-    bool diacriticInsensitive = (predicateOptions & NSDiacriticInsensitivePredicateOption);
-    RLMPrecondition(!diacriticInsensitive, @"Invalid predicate option",
-                    @"NSDiacriticInsensitivePredicateOption not supported for string type");
-    RLMPrecondition(caseSensitive, @"Invalid predicate option",
-                    @"NSCaseInsensitivePredicateOption not supported for queries on linked strings");
-
-    tightdb::StringData sd = RLMStringDataWithNSString(value);
-    switch (operatorType) {
-        case NSBeginsWithPredicateOperatorType:
-            @throw RLMPredicateException(@"Invalid type", @"Predicate 'BEGINSWITH' is not supported");
-        case NSEndsWithPredicateOperatorType:
-            @throw RLMPredicateException(@"Invalid type", @"Predicate 'ENDSWITH' is not supported");
-        case NSContainsPredicateOperatorType:
-            @throw RLMPredicateException(@"Invalid type", @"Predicate 'CONTAINS' is not supported");
-        case NSEqualToPredicateOperatorType:
-            query.and_query(column == sd);
-            break;
-        case NSNotEqualToPredicateOperatorType:
-            query.and_query(column != sd);
+            query.and_query(column.not_equal(sd, caseSensitive));
             break;
         default:
             @throw RLMPredicateException(@"Invalid operator type",
@@ -359,12 +326,7 @@ void add_constraint_to_query(tightdb::Query &query, RLMPropertyType type,
             add_numeric_constraint_to_query(query, type, operatorType, table()->column<Int>(idx), [value longLongValue]);
             break;
         case type_String:
-            if (linkColumns.empty()) {
-                add_string_constraint_to_query(query, operatorType, predicateOptions, idx, value);
-            }
-            else {
-                add_string_constraint_to_link_query(query, operatorType, predicateOptions, table()->column<String>(idx), value);
-            }
+            add_string_constraint_to_query(query, operatorType, predicateOptions, table()->column<String>(idx), value);
             break;
         case type_Binary:
             if (linkColumns.empty()) {
@@ -501,7 +463,9 @@ Query column_expression(NSComparisonPredicateOptions operatorType,
     }
 }
 
-void update_query_with_column_expression(RLMObjectSchema *scheme, Query &query, NSString *leftColumnName, NSString *rightColumnName, NSComparisonPredicateOptions predicateOptions)
+void update_query_with_column_expression(RLMObjectSchema *scheme, Query &query,
+                                         NSString *leftColumnName, NSString *rightColumnName,
+                                         NSComparisonPredicate *predicate)
 {
     // Validate object types
     NSUInteger leftIndex = RLMValidatedColumnIndex(scheme, leftColumnName);
@@ -522,24 +486,50 @@ void update_query_with_column_expression(RLMObjectSchema *scheme, Query &query, 
                     RLMTypeToString(rightType));
 
     // TODO: Should we handle special case where left row is the same as right row (tautology)
+    Table *table = query.get_table().get();
+    NSPredicateOperatorType type = predicate.predicateOperatorType;
     switch (leftType) {
         case type_Bool:
-            query.and_query(column_expression<Bool>(predicateOptions, leftIndex, rightIndex, &(*query.get_table())));
+            query.and_query(column_expression<Bool>(type, leftIndex, rightIndex, table));
             break;
         case type_Int:
-            query.and_query(column_expression<Int>(predicateOptions, leftIndex, rightIndex, &(*query.get_table())));
+            query.and_query(column_expression<Int>(type, leftIndex, rightIndex, table));
             break;
         case type_Float:
-            query.and_query(column_expression<Float>(predicateOptions, leftIndex, rightIndex, &(*query.get_table())));
+            query.and_query(column_expression<Float>(type, leftIndex, rightIndex, table));
             break;
         case type_Double:
-            query.and_query(column_expression<Double>(predicateOptions, leftIndex, rightIndex, &(*query.get_table())));
+            query.and_query(column_expression<Double>(type, leftIndex, rightIndex, table));
             break;
         case type_DateTime:
             // FIXME: int64_t should be DateTime but that doesn't work on 32 bit
             // FIXME: as time_t(32bit) != time_t(64bit)
-            query.and_query(column_expression<int64_t>(predicateOptions, leftIndex, rightIndex, &(*query.get_table())));
+            query.and_query(column_expression<int64_t>(type, leftIndex, rightIndex, table));
             break;
+        case type_String: {
+            bool caseSensitive = (predicate.options & NSCaseInsensitivePredicateOption) == 0;
+            switch (type) {
+                case NSBeginsWithPredicateOperatorType:
+                    query.and_query(table->column<String>(leftIndex).begins_with(table->column<String>(rightIndex), caseSensitive));
+                    break;
+                case NSEndsWithPredicateOperatorType:
+                    query.and_query(table->column<String>(leftIndex).ends_with(table->column<String>(rightIndex), caseSensitive));
+                    break;
+                case NSContainsPredicateOperatorType:
+                    query.and_query(table->column<String>(leftIndex).contains(table->column<String>(rightIndex), caseSensitive));
+                    break;
+                case NSEqualToPredicateOperatorType:
+                    query.and_query(table->column<String>(leftIndex).equal(table->column<String>(rightIndex), caseSensitive));
+                    break;
+                case NSNotEqualToPredicateOperatorType:
+                    query.and_query(table->column<String>(leftIndex).not_equal(table->column<String>(rightIndex), caseSensitive));
+                    break;
+                default:
+                    @throw RLMPredicateException(@"Invalid operator type",
+                                                 @"Operator type %lu not supported for string type", (unsigned long)type);
+            }
+            break;
+        }
         default:
             @throw RLMPredicateException(RLMUnsupportedTypesFoundInPropertyComparisonException,
                                          RLMUnsupportedTypesFoundInPropertyComparisonReason,
@@ -614,8 +604,8 @@ void update_query_with_predicate(NSPredicate *predicate, RLMSchema *schema,
 
         if (exp1Type == NSKeyPathExpressionType && exp2Type == NSKeyPathExpressionType) {
             // both expression are KeyPaths
-            update_query_with_column_expression(objectSchema, query, compp.leftExpression.keyPath, compp.rightExpression.keyPath,
-                                                compp.predicateOperatorType);
+            update_query_with_column_expression(objectSchema, query, compp.leftExpression.keyPath,
+                                                compp.rightExpression.keyPath, compp);
         }
         else if (exp1Type == NSKeyPathExpressionType && exp2Type == NSConstantValueExpressionType) {
             // comparing keypath to value

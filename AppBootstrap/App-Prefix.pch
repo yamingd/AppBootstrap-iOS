@@ -22,7 +22,7 @@
 #import "UIColor+FlatColors.h"
 #import "UIViewController+Social.h"
 
-#ifdef __ADS__
+#ifdef __BAIDU_ADS__
 
 #import "UIViewController+Ads.h"
 

@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+#define kFullScreenHeight (CGRectGetHeight([UIScreen mainScreen].bounds))
+#define kFullScreenWidth (CGRectGetWidth([UIScreen mainScreen].bounds))
+
 @interface Utility : NSObject
 
 +(NSDictionary*) dictFromPlist:(NSString *)name;
 
 +(NSArray*) arrayFromPlist:(NSString *)name;
-+(NSArray*) arrayFromPlist:(NSString *)name model:(Class)mclass;
 
 +(void)urlToFile:(NSString **)url toLocalURL:(NSString *)fileName;
 
@@ -35,5 +37,18 @@
 +(int)random:(int)from end:(int)end;
 
 +(void)addSkipBackupAttributeToItemAtURL:(NSURL*)url;
+
++(BOOL)mobileOK:(NSString*)mobile;
+
++(id)toHumanSize:(long long)value;
+
+/**
+ *  拨打电话
+ *
+ *  @param phone 手机号码，或者带分机号
+ */
++ (void)callPhone:(NSString *)phone;
+
++ (NSString*)dataHex:(NSData*)data;
 
 @end
