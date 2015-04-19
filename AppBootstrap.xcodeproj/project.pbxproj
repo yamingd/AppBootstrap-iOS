@@ -131,6 +131,20 @@
 		CE7BFB321A023681003F7A6C /* POVoiceHUDDelegate.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA571A022D70003F7A6C /* POVoiceHUDDelegate.h */; };
 		CE7BFB351A023691003F7A6C /* TSAppResponse.hh in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA261A022D70003F7A6C /* TSAppResponse.hh */; };
 		CE7BFC311A023C4D003F7A6C /* sdk.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA1F1A022D70003F7A6C /* sdk.h */; };
+		CE87ACDE1AE3701D0054183A /* GDIIndexBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CE87ACBD1AE3701D0054183A /* GDIIndexBar.m */; };
+		CE87ACDF1AE3701D0054183A /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = CE87ACBF1AE3701D0054183A /* bitstream.c */; };
+		CE87ACE01AE3701D0054183A /* mask.c in Sources */ = {isa = PBXBuildFile; fileRef = CE87ACC11AE3701D0054183A /* mask.c */; };
+		CE87ACE11AE3701D0054183A /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE87ACC41AE3701D0054183A /* QRCodeGenerator.m */; };
+		CE87ACE21AE3701D0054183A /* qrencode.c in Sources */ = {isa = PBXBuildFile; fileRef = CE87ACC51AE3701D0054183A /* qrencode.c */; };
+		CE87ACE31AE3701D0054183A /* qrinput.c in Sources */ = {isa = PBXBuildFile; fileRef = CE87ACC71AE3701D0054183A /* qrinput.c */; };
+		CE87ACE41AE3701D0054183A /* qrspec.c in Sources */ = {isa = PBXBuildFile; fileRef = CE87ACC91AE3701D0054183A /* qrspec.c */; };
+		CE87ACE51AE3701D0054183A /* rscode.c in Sources */ = {isa = PBXBuildFile; fileRef = CE87ACCB1AE3701D0054183A /* rscode.c */; };
+		CE87ACE61AE3701D0054183A /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = CE87ACCD1AE3701D0054183A /* split.c */; };
+		CE87ACE71AE3701D0054183A /* MSCMoreOptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE87ACD21AE3701D0054183A /* MSCMoreOptionTableViewCell.m */; };
+		CE87ACE81AE3701D0054183A /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE87ACD61AE3701D0054183A /* QRCameraSwitchButton.m */; };
+		CE87ACE91AE3701D0054183A /* QRCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = CE87ACD81AE3701D0054183A /* QRCodeReader.m */; };
+		CE87ACEA1AE3701D0054183A /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE87ACDB1AE3701D0054183A /* QRCodeReaderView.m */; };
+		CE87ACEB1AE3701D0054183A /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE87ACDD1AE3701D0054183A /* QRCodeReaderViewController.m */; };
 		CEBD47481A0286120020CC16 /* PBObjc.hh in Copy Files */ = {isa = PBXBuildFile; fileRef = CEBD47451A027F2B0020CC16 /* PBObjc.hh */; };
 /* End PBXBuildFile section */
 
@@ -339,6 +353,37 @@
 		CE7BFB061A022F15003F7A6C /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		CE7BFB081A022F20003F7A6C /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		CE7BFB0A1A022F35003F7A6C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		CE87ACBC1AE3701D0054183A /* GDIIndexBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDIIndexBar.h; sourceTree = "<group>"; };
+		CE87ACBD1AE3701D0054183A /* GDIIndexBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDIIndexBar.m; sourceTree = "<group>"; };
+		CE87ACBF1AE3701D0054183A /* bitstream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitstream.c; sourceTree = "<group>"; };
+		CE87ACC01AE3701D0054183A /* bitstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitstream.h; sourceTree = "<group>"; };
+		CE87ACC11AE3701D0054183A /* mask.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mask.c; sourceTree = "<group>"; };
+		CE87ACC21AE3701D0054183A /* mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mask.h; sourceTree = "<group>"; };
+		CE87ACC31AE3701D0054183A /* QRCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeGenerator.h; sourceTree = "<group>"; };
+		CE87ACC41AE3701D0054183A /* QRCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeGenerator.m; sourceTree = "<group>"; };
+		CE87ACC51AE3701D0054183A /* qrencode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrencode.c; sourceTree = "<group>"; };
+		CE87ACC61AE3701D0054183A /* qrencode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrencode.h; sourceTree = "<group>"; };
+		CE87ACC71AE3701D0054183A /* qrinput.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrinput.c; sourceTree = "<group>"; };
+		CE87ACC81AE3701D0054183A /* qrinput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrinput.h; sourceTree = "<group>"; };
+		CE87ACC91AE3701D0054183A /* qrspec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrspec.c; sourceTree = "<group>"; };
+		CE87ACCA1AE3701D0054183A /* qrspec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrspec.h; sourceTree = "<group>"; };
+		CE87ACCB1AE3701D0054183A /* rscode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rscode.c; sourceTree = "<group>"; };
+		CE87ACCC1AE3701D0054183A /* rscode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rscode.h; sourceTree = "<group>"; };
+		CE87ACCD1AE3701D0054183A /* split.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = split.c; sourceTree = "<group>"; };
+		CE87ACCE1AE3701D0054183A /* split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = split.h; sourceTree = "<group>"; };
+		CE87ACD01AE3701D0054183A /* MSCMoreOptionTableViewCell-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MSCMoreOptionTableViewCell-Prefix.pch"; sourceTree = "<group>"; };
+		CE87ACD11AE3701D0054183A /* MSCMoreOptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCMoreOptionTableViewCell.h; sourceTree = "<group>"; };
+		CE87ACD21AE3701D0054183A /* MSCMoreOptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCMoreOptionTableViewCell.m; sourceTree = "<group>"; };
+		CE87ACD31AE3701D0054183A /* MSCMoreOptionTableViewCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCMoreOptionTableViewCellDelegate.h; sourceTree = "<group>"; };
+		CE87ACD51AE3701D0054183A /* QRCameraSwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCameraSwitchButton.h; sourceTree = "<group>"; };
+		CE87ACD61AE3701D0054183A /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCameraSwitchButton.m; sourceTree = "<group>"; };
+		CE87ACD71AE3701D0054183A /* QRCodeReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReader.h; sourceTree = "<group>"; };
+		CE87ACD81AE3701D0054183A /* QRCodeReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReader.m; sourceTree = "<group>"; };
+		CE87ACD91AE3701D0054183A /* QRCodeReaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderDelegate.h; sourceTree = "<group>"; };
+		CE87ACDA1AE3701D0054183A /* QRCodeReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderView.h; sourceTree = "<group>"; };
+		CE87ACDB1AE3701D0054183A /* QRCodeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderView.m; sourceTree = "<group>"; };
+		CE87ACDC1AE3701D0054183A /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderViewController.h; sourceTree = "<group>"; };
+		CE87ACDD1AE3701D0054183A /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderViewController.m; sourceTree = "<group>"; };
 		CEBD47381A02625F0020CC16 /* BetterNSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetterNSLog.h; sourceTree = "<group>"; };
 		CEBD47451A027F2B0020CC16 /* PBObjc.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PBObjc.hh; sourceTree = "<group>"; };
 		CEBD47461A027F2B0020CC16 /* PBObjc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PBObjc.mm; sourceTree = "<group>"; };
@@ -437,6 +482,7 @@
 		CE7BF9911A022B57003F7A6C /* AppBootstrap */ = {
 			isa = PBXGroup;
 			children = (
+				CE87ACBA1AE3701D0054183A /* Vendor */,
 				CE5EA72D1AE3638B00E80E4D /* Umeng */,
 				CE4BF11F1A0371E300A7BBBC /* Category */,
 				CE7BF9A91A022D70003F7A6C /* AESCrypt */,
@@ -650,6 +696,76 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE87ACBA1AE3701D0054183A /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				CE87ACBB1AE3701D0054183A /* GDIndexBar */,
+				CE87ACBE1AE3701D0054183A /* libqrencode */,
+				CE87ACCF1AE3701D0054183A /* MSCMoreOptionTableViewCell */,
+				CE87ACD41AE3701D0054183A /* QRCodeReaderViewController */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		CE87ACBB1AE3701D0054183A /* GDIndexBar */ = {
+			isa = PBXGroup;
+			children = (
+				CE87ACBC1AE3701D0054183A /* GDIIndexBar.h */,
+				CE87ACBD1AE3701D0054183A /* GDIIndexBar.m */,
+			);
+			path = GDIndexBar;
+			sourceTree = "<group>";
+		};
+		CE87ACBE1AE3701D0054183A /* libqrencode */ = {
+			isa = PBXGroup;
+			children = (
+				CE87ACBF1AE3701D0054183A /* bitstream.c */,
+				CE87ACC01AE3701D0054183A /* bitstream.h */,
+				CE87ACC11AE3701D0054183A /* mask.c */,
+				CE87ACC21AE3701D0054183A /* mask.h */,
+				CE87ACC31AE3701D0054183A /* QRCodeGenerator.h */,
+				CE87ACC41AE3701D0054183A /* QRCodeGenerator.m */,
+				CE87ACC51AE3701D0054183A /* qrencode.c */,
+				CE87ACC61AE3701D0054183A /* qrencode.h */,
+				CE87ACC71AE3701D0054183A /* qrinput.c */,
+				CE87ACC81AE3701D0054183A /* qrinput.h */,
+				CE87ACC91AE3701D0054183A /* qrspec.c */,
+				CE87ACCA1AE3701D0054183A /* qrspec.h */,
+				CE87ACCB1AE3701D0054183A /* rscode.c */,
+				CE87ACCC1AE3701D0054183A /* rscode.h */,
+				CE87ACCD1AE3701D0054183A /* split.c */,
+				CE87ACCE1AE3701D0054183A /* split.h */,
+			);
+			path = libqrencode;
+			sourceTree = "<group>";
+		};
+		CE87ACCF1AE3701D0054183A /* MSCMoreOptionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE87ACD01AE3701D0054183A /* MSCMoreOptionTableViewCell-Prefix.pch */,
+				CE87ACD11AE3701D0054183A /* MSCMoreOptionTableViewCell.h */,
+				CE87ACD21AE3701D0054183A /* MSCMoreOptionTableViewCell.m */,
+				CE87ACD31AE3701D0054183A /* MSCMoreOptionTableViewCellDelegate.h */,
+			);
+			path = MSCMoreOptionTableViewCell;
+			sourceTree = "<group>";
+		};
+		CE87ACD41AE3701D0054183A /* QRCodeReaderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE87ACD51AE3701D0054183A /* QRCameraSwitchButton.h */,
+				CE87ACD61AE3701D0054183A /* QRCameraSwitchButton.m */,
+				CE87ACD71AE3701D0054183A /* QRCodeReader.h */,
+				CE87ACD81AE3701D0054183A /* QRCodeReader.m */,
+				CE87ACD91AE3701D0054183A /* QRCodeReaderDelegate.h */,
+				CE87ACDA1AE3701D0054183A /* QRCodeReaderView.h */,
+				CE87ACDB1AE3701D0054183A /* QRCodeReaderView.m */,
+				CE87ACDC1AE3701D0054183A /* QRCodeReaderViewController.h */,
+				CE87ACDD1AE3701D0054183A /* QRCodeReaderViewController.m */,
+			);
+			path = QRCodeReaderViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -809,6 +925,7 @@
 				CE6E69BF1A0321B6002F7E22 /* PBObjc.mm in Sources */,
 				CE7BFAC31A022D70003F7A6C /* DOUAudioRenderer.m in Sources */,
 				CE5EA7271AE35EBF00E80E4D /* LPlaceholderTextView.m in Sources */,
+				CE87ACEA1AE3701D0054183A /* QRCodeReaderView.m in Sources */,
 				CE4BF12E1A03726F00A7BBBC /* NSData+Ext.m in Sources */,
 				CE5EA7281AE35EBF00E80E4D /* UIImageEdView.m in Sources */,
 				CE7BFAA91A022D70003F7A6C /* UIViewController+TAPKeyboardPop.m in Sources */,
@@ -817,6 +934,8 @@
 				CE5EA7301AE3638B00E80E4D /* KMobClick.m in Sources */,
 				CE7BFAC51A022D70003F7A6C /* DOUSimpleHTTPRequest.m in Sources */,
 				CE7BFA9E1A022D70003F7A6C /* HYCircleLoadingView.m in Sources */,
+				CE87ACE81AE3701D0054183A /* QRCameraSwitchButton.m in Sources */,
+				CE87ACE01AE3701D0054183A /* mask.c in Sources */,
 				CE5EA72A1AE35EBF00E80E4D /* UIViewController+ImagePicker.m in Sources */,
 				CE7BFAA31A022D70003F7A6C /* UILabel+Ext.m in Sources */,
 				CE4BF1301A03726F00A7BBBC /* NSString+Ext.m in Sources */,
@@ -826,12 +945,16 @@
 				CE7BFABE1A022D70003F7A6C /* DOUAudioEventLoop.m in Sources */,
 				CE7BFAC41A022D70003F7A6C /* DOUAudioStreamer.m in Sources */,
 				CE7BFABB1A022D70003F7A6C /* Utility.m in Sources */,
+				CE87ACEB1AE3701D0054183A /* QRCodeReaderViewController.m in Sources */,
 				CE4BF12D1A03726F00A7BBBC /* NSData+CommonCrypto.m in Sources */,
+				CE87ACE71AE3701D0054183A /* MSCMoreOptionTableViewCell.m in Sources */,
 				CE7BFAC91A022D70003F7A6C /* NSDate+TimeAgo.m in Sources */,
 				CE7BFAA71A022D70003F7A6C /* UIViewController+Ext.m in Sources */,
+				CE87ACE21AE3701D0054183A /* qrencode.c in Sources */,
 				CE7BFAB11A022D70003F7A6C /* DeviceHelper.m in Sources */,
 				CE7BFAAC1A022D70003F7A6C /* AppResponse.m in Sources */,
 				CE7BFAA61A022D70003F7A6C /* UIViewController+CWPopup.m in Sources */,
+				CE87ACDF1AE3701D0054183A /* bitstream.c in Sources */,
 				CE7BFA9C1A022D70003F7A6C /* CMPopTipView.m in Sources */,
 				CE7BFAB01A022D70003F7A6C /* BaseViewController.m in Sources */,
 				CE7BFAA21A022D70003F7A6C /* UIImageView+LBBlurredImage.m in Sources */,
@@ -843,22 +966,29 @@
 				CE7BFAC81A022D70003F7A6C /* NSDate+Helper.m in Sources */,
 				CE7BFA861A022D70003F7A6C /* AESCrypt.m in Sources */,
 				CE7BFAA01A022D70003F7A6C /* UIImage+ImageEffects.m in Sources */,
+				CE87ACE51AE3701D0054183A /* rscode.c in Sources */,
 				CE7BFA9D1A022D70003F7A6C /* FHSegmentedViewController.m in Sources */,
 				CE7BFAA11A022D70003F7A6C /* UIImageView+Ext.m in Sources */,
 				CE7BFAAD1A022D70003F7A6C /* AppSession.m in Sources */,
+				CE87ACE41AE3701D0054183A /* qrspec.c in Sources */,
 				CE7BFA9F1A022D70003F7A6C /* MBProgressHUD.m in Sources */,
 				CE7BF9951A022B57003F7A6C /* AppBootstrap.m in Sources */,
 				CE5EA72B1AE35EBF00E80E4D /* UIViewController+SearchBar.m in Sources */,
 				CE7BFABC1A022D70003F7A6C /* XibFactory.m in Sources */,
 				CE7BFAAA1A022D70003F7A6C /* APIClient.m in Sources */,
+				CE87ACE61AE3701D0054183A /* split.c in Sources */,
 				CE7BFAC61A022D70003F7A6C /* NSData+DOUMappedFile.m in Sources */,
 				CE7BFACC1A022D70003F7A6C /* OpenUDID.m in Sources */,
 				CE7BFAC01A022D70003F7A6C /* DOUAudioFileProvider.m in Sources */,
 				CE7BFAC11A022D70003F7A6C /* DOUAudioLPCM.m in Sources */,
 				CE7BFAAE1A022D70003F7A6C /* Audio.m in Sources */,
+				CE87ACE31AE3701D0054183A /* qrinput.c in Sources */,
 				CE7BFAA41A022D70003F7A6C /* UITabBarController+Ext.m in Sources */,
 				CE7BFABF1A022D70003F7A6C /* DOUAudioFilePreprocessor.m in Sources */,
+				CE87ACE91AE3701D0054183A /* QRCodeReader.m in Sources */,
 				CE7BFAB51A022D70003F7A6C /* PAppResponse.pb.mm in Sources */,
+				CE87ACDE1AE3701D0054183A /* GDIIndexBar.m in Sources */,
+				CE87ACE11AE3701D0054183A /* QRCodeGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
