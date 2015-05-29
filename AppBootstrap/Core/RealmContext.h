@@ -25,4 +25,6 @@
 +(void)updateCommon:(NSString*)name block:(void (^)(RLMRealm* realm))block;
 +(void)queryCommon:(NSString*)name block:(void (^)(RLMRealm* realm))block;
 
++(void)migrateTo:(int)version withMigrationBlock:(RLMMigrationBlock)block;
+
 @end

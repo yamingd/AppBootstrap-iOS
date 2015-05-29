@@ -11,6 +11,8 @@
 
 @implementation RealmContext
 
+#pragma mark - User DB
+
 +(NSString*)userFolder{
     NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *folder = [NSString stringWithFormat:@"%@/%@", documentsDirectory, [AppSession current].userId];
@@ -65,7 +67,7 @@
     block(realm);
 }
 
-#pragma common cache data for all users
+#pragma mark - Common DB
 
 +(NSString*)commonFolder{
     NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
@@ -119,6 +121,32 @@
 +(void)queryCommon:(NSString *)name block:(void (^)(RLMRealm *))block{
     RLMRealm* realm = [RealmContext openCommon:name];
     block(realm);
+}
+
+
+#pragma mark - Migrate
+
++(void)migrateTo:(int)version withMigrationBlock:(RLMMigrationBlock)block{
+    
+    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSDirectoryEnumerator* dirnum = [[NSFileManager defaultManager] enumeratorAtPath:documentsDirectory];
+    NSString *nextItem = [NSString string];
+    while( (nextItem = [dirnum nextObject])) {
+        if ([[nextItem pathExtension] isEqualToString: @"realm"]) {
+            nextItem = [documentsDirectory stringByAppendingPathComponent:nextItem];
+            LOG(@"migrate RLM: %@", nextItem);
+            if ([fileManager isReadableFileAtPath:nextItem]) {
+                // Notice setSchemaVersion is set to 1, this is always set manually. It must be
+                // higher than the previous version (oldSchemaVersion) or an RLMException is thrown
+                [RLMRealm setSchemaVersion:version
+                            forRealmAtPath:nextItem
+                        withMigrationBlock:block];
+            }
+        }
+    }
+    
 }
 
 @end
