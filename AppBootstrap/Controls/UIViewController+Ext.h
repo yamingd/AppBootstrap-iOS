@@ -18,8 +18,8 @@
 -(void)fitHeight:(UIView*)view;
 
 -(CGSize)sizeInPoint;
--(CGSize)ScreenSize;
--(BOOL)Retina;
+-(CGSize)screenSize;
+-(BOOL)retina;
 
 /*navigation controller setting*/
 -(void)setNavColor;

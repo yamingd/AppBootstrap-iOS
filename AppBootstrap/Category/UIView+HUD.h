@@ -1,9 +1,5 @@
 //
 //  UIView+HUD.h
-//  k12
-//
-//  Created by jiaxiaobang on 15/1/10.
-//  Copyright (c) 2015年 jiaxiaobang.com. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

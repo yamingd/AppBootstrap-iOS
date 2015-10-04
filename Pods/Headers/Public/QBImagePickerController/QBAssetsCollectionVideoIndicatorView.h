@@ -1,1 +1,0 @@
-../../../QBImagePickerController/Pod/Classes/QBAssetsCollectionVideoIndicatorView.h

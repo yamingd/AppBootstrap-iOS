@@ -21,13 +21,17 @@
 @class RLMRealm;
 
 // Add a Realm to the weak cache
-void RLMCacheRealm(RLMRealm *realm);
+FOUNDATION_EXPORT void RLMCacheRealm(RLMRealm *realm);
 // Get a Realm for the given path which can be used on the current thread
-RLMRealm *RLMGetThreadLocalCachedRealmForPath(NSString *path);
+FOUNDATION_EXPORT RLMRealm *RLMGetThreadLocalCachedRealmForPath(NSString *path);
 // Get a Realm for the given path
-RLMRealm *RLMGetAnyCachedRealmForPath(NSString *path);
+FOUNDATION_EXPORT RLMRealm *RLMGetAnyCachedRealmForPath(NSString *path);
 // Clear the weak cache of Realms
-void RLMClearRealmCache();
+FOUNDATION_EXPORT void RLMClearRealmCache();
+
+// Install an uncaught exception handler that cancels write transactions
+// for all cached realms on the current thread
+FOUNDATION_EXPORT void RLMInstallUncaughtExceptionHandler();
 
 @interface RLMNotifier : NSObject
 // listens to changes to the realm's file and notifies it when they occur

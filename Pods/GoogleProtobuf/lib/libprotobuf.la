@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/Users/user/Projects/AppBootstrap/Pods/GoogleProtobuf/lib'
+libdir='/Users/user/Library/Caches/CocoaPods/Pods/Release/GoogleProtobuf/2.5.0-34965/lib'

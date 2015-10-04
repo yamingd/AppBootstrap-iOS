@@ -17,16 +17,11 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-#import "sdk.h"
+#import "boost.h"
+
 #import "UIViewController+Ext.h"
 #import "UIColor+FlatColors.h"
-#import "UIViewController+Social.h"
 
-#ifdef __BAIDU_ADS__
-
-#import "UIViewController+Ads.h"
-
-#endif
 
 #endif
 

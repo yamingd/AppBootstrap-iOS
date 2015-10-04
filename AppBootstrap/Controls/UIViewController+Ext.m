@@ -30,7 +30,7 @@
     //Implement in subclass
 }
 
--(CGSize)ScreenSize{
+-(CGSize)screenSize{
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     CGFloat screenScale = [[UIScreen mainScreen] scale];
     CGSize screenSize = CGSizeMake(screenBounds.size.width * screenScale, screenBounds.size.height * screenScale);
@@ -40,7 +40,7 @@
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     return screenBounds.size;
 }
--(BOOL)Retina{
+-(BOOL)retina{
     CGFloat screenScale = [[UIScreen mainScreen] scale];
     return screenScale > 1.0;
 }

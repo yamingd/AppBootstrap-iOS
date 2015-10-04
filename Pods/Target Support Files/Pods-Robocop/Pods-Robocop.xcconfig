@@ -1,1 +1,0 @@
-PODS_ROBOCOP_OTHER_LDFLAGS = -framework "AVFoundation"

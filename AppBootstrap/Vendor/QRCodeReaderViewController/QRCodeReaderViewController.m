@@ -175,10 +175,10 @@
     //        [self.view addSubview:_switchCameraButton];
     //    }
     
-    self.cancelButton                                       = [[UIButton alloc] init];
+    self.cancelButton = [[UIButton alloc] init];
     _cancelButton.translatesAutoresizingMaskIntoConstraints = NO;
     [_cancelButton setTitle:cancelButtonTitle forState:UIControlStateNormal];
-    [_cancelButton setTitleColor:kColor_69C forState:UIControlStateNormal];
+    [_cancelButton setTitleColor:UIColorFromRGB(99, 146, 193) forState:UIControlStateNormal];
     [_cancelButton addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
     _cancelButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];
     [self.view addSubview:_cancelButton];

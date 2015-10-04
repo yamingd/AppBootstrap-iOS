@@ -14,10 +14,23 @@
 @property (strong, nonatomic) NSDictionary *launchOptions;
 @property (strong, nonatomic) NSDictionary *userNotification;
 
--(void)initRootController;
 -(void)setRootController:(UIViewController *)vc;
--(void)init3rdOptions;
--(void)initRateLaunch;
--(void)removeTempData;
+
+-(NSString*)getAppNameString;
+
+-(BOOL)shouldEnableAPNS;
+
+-(void)application:(UIApplication *)application prepareAppSession:(NSDictionary *)launchOptions;
+
+-(void)application:(UIApplication *)application prepareRootController:(NSDictionary *)launchOptions;
+
+-(void)application:(UIApplication *)application prepareOpenControllers:(NSDictionary *)launchOptions;
+
+-(void)application:(UIApplication *)application prepareDatabase:(NSDictionary *)launchOptions;
+
+-(void)application:(UIApplication *)application prepareComponents:(NSDictionary *)launchOptions;
+
+-(void)onNetworkLost;
+-(void)onNetworkReconnect;
 
 @end

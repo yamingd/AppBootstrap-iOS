@@ -1,4 +1,4 @@
-prefix=/Users/user/Projects/AppBootstrap/Pods/GoogleProtobuf
+prefix=/Users/user/Library/Caches/CocoaPods/Pods/Release/GoogleProtobuf/2.5.0-34965
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

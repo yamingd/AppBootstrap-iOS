@@ -1,1 +1,1 @@
-../../../QBImagePickerController/Pod/Classes/QBImagePickerController.h
+../../../QBImagePickerController/QBImagePicker/QBImagePickerController.h
