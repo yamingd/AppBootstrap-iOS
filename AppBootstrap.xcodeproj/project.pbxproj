@@ -38,8 +38,8 @@
 		CE5EA7281AE35EBF00E80E4D /* UIImageEdView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5EA71F1AE35EBF00E80E4D /* UIImageEdView.m */; };
 		CE5EA72A1AE35EBF00E80E4D /* UIViewController+ImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5EA7221AE35EBF00E80E4D /* UIViewController+ImagePicker.m */; };
 		CE5EA72B1AE35EBF00E80E4D /* UIViewController+SearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5EA7241AE35EBF00E80E4D /* UIViewController+SearchBar.m */; };
-		CE7BF9931A022B57003F7A6C /* AppBootstrap.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BF9921A022B57003F7A6C /* AppBootstrap.h */; };
-		CE7BF9951A022B57003F7A6C /* AppBootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BF9941A022B57003F7A6C /* AppBootstrap.m */; };
+		CE7BF9931A022B57003F7A6C /* BootstrapDelegate.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BF9921A022B57003F7A6C /* BootstrapDelegate.h */; };
+		CE7BF9951A022B57003F7A6C /* BootstrapDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BF9941A022B57003F7A6C /* BootstrapDelegate.m */; };
 		CE7BF99B1A022B57003F7A6C /* libAppBootstrap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7BF98F1A022B57003F7A6C /* libAppBootstrap.a */; };
 		CE7BFA9D1A022D70003F7A6C /* FHSegmentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BF9EA1A022D70003F7A6C /* FHSegmentedViewController.m */; };
 		CE7BFA9E1A022D70003F7A6C /* HYCircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BF9EC1A022D70003F7A6C /* HYCircleLoadingView.m */; };
@@ -50,7 +50,6 @@
 		CE7BFAA41A022D70003F7A6C /* UITabBarController+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BF9F81A022D70003F7A6C /* UITabBarController+Ext.m */; };
 		CE7BFAA71A022D70003F7A6C /* UIViewController+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BF9FE1A022D70003F7A6C /* UIViewController+Ext.m */; };
 		CE7BFAC81A022D70003F7A6C /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA471A022D70003F7A6C /* NSDate+Helper.m */; };
-		CE7BFAC91A022D70003F7A6C /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7BFA491A022D70003F7A6C /* NSDate+TimeAgo.m */; };
 		CE7BFAEE1A022E15003F7A6C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7BFAD51A022DC1003F7A6C /* AdSupport.framework */; };
 		CE7BFAEF1A022E1D003F7A6C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7BFAD61A022DC1003F7A6C /* AudioToolbox.framework */; };
 		CE7BFAF01A022E23003F7A6C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7BFAD71A022DC1003F7A6C /* AVFoundation.framework */; };
@@ -74,7 +73,6 @@
 		CE7BFB171A023681003F7A6C /* UITabBarController+Ext.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BF9F71A022D70003F7A6C /* UITabBarController+Ext.h */; };
 		CE7BFB1A1A023681003F7A6C /* UIViewController+Ext.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BF9FD1A022D70003F7A6C /* UIViewController+Ext.h */; };
 		CE7BFB2D1A023681003F7A6C /* NSDate+Helper.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA461A022D70003F7A6C /* NSDate+Helper.h */; };
-		CE7BFB2E1A023681003F7A6C /* NSDate+TimeAgo.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE7BFA481A022D70003F7A6C /* NSDate+TimeAgo.h */; };
 		CE87ACDE1AE3701D0054183A /* GDIIndexBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CE87ACBD1AE3701D0054183A /* GDIIndexBar.m */; };
 		CE87ACDF1AE3701D0054183A /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = CE87ACBF1AE3701D0054183A /* bitstream.c */; };
 		CE87ACE01AE3701D0054183A /* mask.c in Sources */ = {isa = PBXBuildFile; fileRef = CE87ACC11AE3701D0054183A /* mask.c */; };
@@ -136,6 +134,12 @@
 		CEC78CFC1BC16973005ADCF4 /* UIViewController+SearchBar.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CE5EA7231AE35EBF00E80E4D /* UIViewController+SearchBar.h */; };
 		CEC78CFD1BC16973005ADCF4 /* BetterNSLog.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CEBD47381A02625F0020CC16 /* BetterNSLog.h */; };
 		CEC78CFE1BC16973005ADCF4 /* AppSecurity.h in Copy Files */ = {isa = PBXBuildFile; fileRef = CEC065BF1BBE4EE200DAD1E5 /* AppSecurity.h */; };
+		CEC78D441BC17BF1005ADCF4 /* TSAppResponse.hh in Copy Files */ = {isa = PBXBuildFile; fileRef = CEC065A71BBE1E1500DAD1E5 /* TSAppResponse.hh */; };
+		CEC78D451BC17BF1005ADCF4 /* PAppResponse.pb.hh in Copy Files */ = {isa = PBXBuildFile; fileRef = CEC065B31BBE24BB00DAD1E5 /* PAppResponse.pb.hh */; };
+		CEC78D461BC17BF1005ADCF4 /* PAppSession.pb.hh in Copy Files */ = {isa = PBXBuildFile; fileRef = CEC065B61BBE24BB00DAD1E5 /* PAppSession.pb.hh */; };
+		CEC78D471BC17BF1005ADCF4 /* PBObjc.hh in Copy Files */ = {isa = PBXBuildFile; fileRef = CEC065AA1BBE1E1500DAD1E5 /* PBObjc.hh */; };
+		CEC78D481BC17BF1005ADCF4 /* PBObjcWrapper.hh in Copy Files */ = {isa = PBXBuildFile; fileRef = CEC065AC1BBE1E1500DAD1E5 /* PBObjcWrapper.hh */; };
+		CEC78D491BC17BF1005ADCF4 /* TSAppSession.hh in Copy Files */ = {isa = PBXBuildFile; fileRef = CEC065BB1BBE27B400DAD1E5 /* TSAppSession.hh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +166,12 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				CEC78D441BC17BF1005ADCF4 /* TSAppResponse.hh in Copy Files */,
+				CEC78D451BC17BF1005ADCF4 /* PAppResponse.pb.hh in Copy Files */,
+				CEC78D461BC17BF1005ADCF4 /* PAppSession.pb.hh in Copy Files */,
+				CEC78D471BC17BF1005ADCF4 /* PBObjc.hh in Copy Files */,
+				CEC78D481BC17BF1005ADCF4 /* PBObjcWrapper.hh in Copy Files */,
+				CEC78D491BC17BF1005ADCF4 /* TSAppSession.hh in Copy Files */,
 				CEC78CDC1BC16973005ADCF4 /* boost.h in Copy Files */,
 				CEC78CDD1BC16973005ADCF4 /* APIClient.h in Copy Files */,
 				CEC78CDE1BC16973005ADCF4 /* AFProtobufResponseSerializer.h in Copy Files */,
@@ -208,8 +218,7 @@
 				CE7BFB171A023681003F7A6C /* UITabBarController+Ext.h in Copy Files */,
 				CE7BFB1A1A023681003F7A6C /* UIViewController+Ext.h in Copy Files */,
 				CE7BFB2D1A023681003F7A6C /* NSDate+Helper.h in Copy Files */,
-				CE7BFB2E1A023681003F7A6C /* NSDate+TimeAgo.h in Copy Files */,
-				CE7BF9931A022B57003F7A6C /* AppBootstrap.h in Copy Files */,
+				CE7BF9931A022B57003F7A6C /* BootstrapDelegate.h in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,8 +255,8 @@
 		CE5EA7231AE35EBF00E80E4D /* UIViewController+SearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SearchBar.h"; sourceTree = "<group>"; };
 		CE5EA7241AE35EBF00E80E4D /* UIViewController+SearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SearchBar.m"; sourceTree = "<group>"; };
 		CE7BF98F1A022B57003F7A6C /* libAppBootstrap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppBootstrap.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE7BF9921A022B57003F7A6C /* AppBootstrap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppBootstrap.h; sourceTree = "<group>"; };
-		CE7BF9941A022B57003F7A6C /* AppBootstrap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppBootstrap.m; sourceTree = "<group>"; };
+		CE7BF9921A022B57003F7A6C /* BootstrapDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BootstrapDelegate.h; sourceTree = "<group>"; };
+		CE7BF9941A022B57003F7A6C /* BootstrapDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BootstrapDelegate.m; sourceTree = "<group>"; };
 		CE7BF99A1A022B57003F7A6C /* AppBootstrapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppBootstrapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7BF9A01A022B57003F7A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7BF9B21A022D70003F7A6C /* App-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "App-Prefix.pch"; sourceTree = "<group>"; };
@@ -269,9 +278,6 @@
 		CE7BF9FE1A022D70003F7A6C /* UIViewController+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Ext.m"; sourceTree = "<group>"; };
 		CE7BFA461A022D70003F7A6C /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
 		CE7BFA471A022D70003F7A6C /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
-		CE7BFA481A022D70003F7A6C /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
-		CE7BFA491A022D70003F7A6C /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
-		CE7BFA4A1A022D70003F7A6C /* NSDateTimeAgo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NSDateTimeAgo.bundle; sourceTree = "<group>"; };
 		CE7BFAD51A022DC1003F7A6C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		CE7BFAD61A022DC1003F7A6C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CE7BFAD71A022DC1003F7A6C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -454,8 +460,8 @@
 				CE7BF9B21A022D70003F7A6C /* App-Prefix.pch */,
 				CE7BF9E61A022D70003F7A6C /* Controls */,
 				CE7BFA431A022D70003F7A6C /* NSDate */,
-				CE7BF9921A022B57003F7A6C /* AppBootstrap.h */,
-				CE7BF9941A022B57003F7A6C /* AppBootstrap.m */,
+				CE7BF9921A022B57003F7A6C /* BootstrapDelegate.h */,
+				CE7BF9941A022B57003F7A6C /* BootstrapDelegate.m */,
 				CEBD47381A02625F0020CC16 /* BetterNSLog.h */,
 				CEC065BB1BBE27B400DAD1E5 /* TSAppSession.hh */,
 				CEC065BC1BBE27B400DAD1E5 /* TSAppSession.mm */,
@@ -517,9 +523,6 @@
 			children = (
 				CE7BFA461A022D70003F7A6C /* NSDate+Helper.h */,
 				CE7BFA471A022D70003F7A6C /* NSDate+Helper.m */,
-				CE7BFA481A022D70003F7A6C /* NSDate+TimeAgo.h */,
-				CE7BFA491A022D70003F7A6C /* NSDate+TimeAgo.m */,
-				CE7BFA4A1A022D70003F7A6C /* NSDateTimeAgo.bundle */,
 			);
 			path = NSDate;
 			sourceTree = "<group>";
@@ -822,7 +825,6 @@
 				CE5A6C601BBEAA2F00A05C97 /* AFProtobufResponseSerializer.m in Sources */,
 				CE4BF12D1A03726F00A7BBBC /* NSData+CommonCrypto.m in Sources */,
 				CE87ACE71AE3701D0054183A /* MSCMoreOptionTableViewCell.m in Sources */,
-				CE7BFAC91A022D70003F7A6C /* NSDate+TimeAgo.m in Sources */,
 				CE7BFAA71A022D70003F7A6C /* UIViewController+Ext.m in Sources */,
 				CE87ACE21AE3701D0054183A /* qrencode.c in Sources */,
 				CE87ACDF1AE3701D0054183A /* bitstream.c in Sources */,
@@ -839,7 +841,7 @@
 				CEC065BA1BBE24BB00DAD1E5 /* PAppSession.pb.mm in Sources */,
 				CE7BFA9F1A022D70003F7A6C /* MBProgressHUD.m in Sources */,
 				CEC065981BBE1CA200DAD1E5 /* AppSession.m in Sources */,
-				CE7BF9951A022B57003F7A6C /* AppBootstrap.m in Sources */,
+				CE7BF9951A022B57003F7A6C /* BootstrapDelegate.m in Sources */,
 				CE5EA72B1AE35EBF00E80E4D /* UIViewController+SearchBar.m in Sources */,
 				CE87ACE61AE3701D0054183A /* split.c in Sources */,
 				CE5A6C6A1BBEBE6000A05C97 /* NSMutableArray+Tool.m in Sources */,
@@ -932,7 +934,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -979,7 +981,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";

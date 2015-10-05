@@ -58,9 +58,11 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "NSDate+TimeAgo/NSDateTimeAgo.bundle"
   install_resource "${BUILT_PRODUCTS_DIR}/QBImagePicker.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "NSDate+TimeAgo/NSDateTimeAgo.bundle"
   install_resource "${BUILT_PRODUCTS_DIR}/QBImagePicker.bundle"
 fi
 

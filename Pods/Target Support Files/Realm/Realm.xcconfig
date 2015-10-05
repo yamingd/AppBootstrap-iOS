@@ -1,0 +1,8 @@
+CLANG_CXX_LANGUAGE_STANDARD = compiler-default
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/Realm" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworkActivityLogger" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/ArrayUtils" "${PODS_ROOT}/Headers/Public/CocoaAsyncSocket" "${PODS_ROOT}/Headers/Public/GoogleProtobuf" "${PODS_ROOT}/Headers/Public/HTKDynamicResizingCell" "${PODS_ROOT}/Headers/Public/NSDate+TimeAgo" "${PODS_ROOT}/Headers/Public/QBImagePickerController" "${PODS_ROOT}/Headers/Public/Realm" "${PODS_ROOT}/Headers/Public/SDWebImage" "${PODS_ROOT}/Headers/Public/SSKeychain" "${PODS_ROOT}/Headers/Public/TMCache" "${PODS_ROOT}/Headers/Public/UIColor+FlatColors"
+LIBRARY_SEARCH_PATHS = $(inherited) "$(PODS_ROOT)/Realm/core"
+OTHER_CPLUSPLUSFLAGS = -std=c++1y $(inherited) -std=c++1y $(inherited)
+OTHER_LDFLAGS = -l"c++" -l"realm-ios"
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

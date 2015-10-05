@@ -27,6 +27,7 @@ PODS:
   - CocoaAsyncSocket (7.4.2)
   - GoogleProtobuf (2.5.0)
   - HTKDynamicResizingCell (0.0.2)
+  - NSDate+TimeAgo (1.0.3)
   - QBImagePickerController (3.2.0)
   - Realm (0.95.2):
     - Realm/Headers (= 0.95.2)
@@ -37,7 +38,6 @@ PODS:
   - SSKeychain (1.2.3)
   - TMCache (2.1.0)
   - UIColor+FlatColors (0.0.2)
-  - ZipArchive (1.4.0)
 
 DEPENDENCIES:
   - AFNetworkActivityLogger (~> 2.0)
@@ -46,13 +46,13 @@ DEPENDENCIES:
   - CocoaAsyncSocket
   - GoogleProtobuf (= 2.5.0)
   - HTKDynamicResizingCell
+  - NSDate+TimeAgo (~> 1.0)
   - QBImagePickerController
   - Realm
   - SDWebImage
   - SSKeychain
   - TMCache
   - UIColor+FlatColors
-  - ZipArchive
 
 SPEC CHECKSUMS:
   AFNetworkActivityLogger: 121486778117d53b3ab1c61d264b88081d0c3eee
@@ -61,12 +61,12 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: f5783bdedd232d91b89769bc4b5a1580aed518ad
   GoogleProtobuf: 3496513e31410d90c076fd82a9660a867b7e2a42
   HTKDynamicResizingCell: 9358514816f0737a8d20329617ee126a1498357c
+  NSDate+TimeAgo: 416f55d2696d3744c313091c5a9280d47f8238fe
   QBImagePickerController: 75b3857b1307a3c01ce486559bc294f802ddec6c
   Realm: 4c026902041bb39c4bd083ebc5e88f4f17973d72
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SSKeychain: 3f42991739c6c60a9cf1bbd4dff6c0d3694bcf3d
   TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
   UIColor+FlatColors: 6c699df7a575281794c688c64cee6c44fd1f93b4
-  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
 COCOAPODS: 0.39.0.beta.4
